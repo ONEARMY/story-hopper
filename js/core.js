@@ -1,5 +1,17 @@
 $( document ).ready( function() {
 
+	$( '#intro footer a' ).click( function(e) {
+
+		var href = $( this ).attr( 'href' );
+
+		$( 'html, body' ).animate({
+			scrollTop: $( href ).offset().top
+		}, 'slow');
+
+		e.preventDefault();
+
+	});
+
 	$( '.toggle-nav' ).click( function(e) {
 
 		if( $( this ).parent().attr( 'id' ) == 'movie' ) {
