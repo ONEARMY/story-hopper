@@ -348,6 +348,13 @@ button {
 	height: 43px;
 	background-repeat: no-repeat;
 	background-position: center center;
+	transition: all .4s;
+	-webkit-transition: all .4s;
+}
+
+#menu li.current-menu-item a, 
+#menu li a:hover {
+	opacity: .5;
 }
 
 #menu li:nth-child(1) a {
