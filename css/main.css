@@ -516,6 +516,7 @@ button {
 	background: #F2DC9F;
 	display: none;
 	text-align: center;
+	overflow: auto;
 }
 
 #movie h1 {
@@ -550,6 +551,7 @@ button {
     display: block;
     padding-top: 48px;
     margin-top: 13%;
+    margin-bottom: 60px;
 }
 
 @media (min-width: 768px) {
