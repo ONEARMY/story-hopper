@@ -55,7 +55,7 @@ button {
 }
 
 .toggle-nav b:nth-child(2) {
-	margin: 4px 0;
+	margin: 7px 0;
 }
 
 .toggle-nav.on {
@@ -67,7 +67,7 @@ button {
 .toggle-nav.on b:nth-child(1) {
 	transform: rotate(-45deg);
 	-webkit-transform: rotate(-45deg);
-	margin-bottom: -8px;
+	margin-bottom: -9px;
 }
 
 .toggle-nav.on b:nth-child(2) {
@@ -77,7 +77,7 @@ button {
 .toggle-nav.on b:nth-child(3) {
 	transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
-	margin-top: -6px;
+	margin-top: -11px;
 }
 
 .blue {
@@ -557,7 +557,6 @@ button {
 @media (min-width: 768px) {
 
 	.toggle-nav {
-		width: 40px;
 		top: 30px;
 		right: 25px;
 	}
