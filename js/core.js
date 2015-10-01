@@ -14,6 +14,8 @@ $( document ).ready( function() {
 
 	$( '.toggle-nav' ).click( function(e) {
 
+		$( 'body' ).toggleClass( 'hide-overflow' );
+
 		if( $( this ).parent().attr( 'id' ) == 'movie' ) {
 
 			var video = $( '#movie' );
@@ -34,6 +36,8 @@ $( document ).ready( function() {
 		var id = $( this ).attr( 'href' ).split( 'v=' )[1],
 			href = 'https://www.youtube.com/embed/' + id,
 			title = $( this ).find( 'span' ).html();
+
+		$( 'body' ).toggleClass( 'hide-overflow' );
 
 		$( '#movie iframe' ).attr( 'src', href );
 		$( '#movie h1' ).html( title );

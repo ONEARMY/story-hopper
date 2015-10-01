@@ -27,6 +27,10 @@ button {
 	cursor: pointer;
 }
 
+.hide-overflow {
+	overflow: hidden;
+}
+
 .toggle-nav {
 	width: 30px;
 	display: block;
