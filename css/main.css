@@ -91,10 +91,11 @@ button {
 	overflow: hidden;
 }
 
-#intro img {
+#intro video {
 	object-fit: cover;
 	height: inherit;
-	min-width: 100%;
+	opacity: .9;
+	width: 100%;
 }
 
 #intro article {
@@ -559,6 +560,7 @@ button {
 	.toggle-nav {
 		top: 30px;
 		right: 25px;
+		position: fixed;
 	}
 
 	#intro h1 {
