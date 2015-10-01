@@ -3,7 +3,13 @@ $( document ).ready( function() {
 	$( '.toggle-nav' ).click( function(e) {
 
 		if( $( this ).parent().attr( 'id' ) == 'movie' ) {
-			$( '#movie' ).fadeToggle();
+
+			var video = $( '#movie' );
+
+			video.fadeToggle( 300, function() {
+				video.find( 'iframe' ).attr( 'src', null );
+			});
+
 		} else {
 			$( '#menu' ).fadeToggle();
 			$( this ).toggleClass( 'on' );
