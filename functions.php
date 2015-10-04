@@ -1,5 +1,36 @@
 <?php
 
+// Unhooked functions
+
+function get_post_id( $slug, $post_type ) {
+
+	$query = new WP_Query([
+		'name' => $slug,
+		'post_type' => $post_type
+	]);
+
+    $query->the_post();
+    return get_the_ID();
+
+}
+
+function get_rating() {
+
+	global $post;
+
+	$slug = $post->post_name;
+	$i = 1;
+	$count = isset( $_COOKIE[$slug] ) ? json_decode( base64_decode($_COOKIE[$slug] ) )->count : 0;
+
+	while( $i <= 5 ) {
+		$class = $i <= $count ? 'full' : '';
+		echo '<i class="' . $class . '"></i>';
+		$i++;
+	}
+
+}
+
+// Hooked functions
 
 function manage_menu() {
 
@@ -21,68 +52,6 @@ function manage_menu() {
 
 add_action( 'admin_menu', 'manage_menu', 999 );
 
-
-function get_post_id( $slug, $post_type ) {
-
-	$query = new WP_Query([
-		'name' => $slug,
-		'post_type' => $post_type
-	]);
-
-    $query->the_post();
-    return get_the_ID();
-
-}
-
-
-function rating_updated() {
-
-	global $wpdb;
-
-	if( isset( $_POST['movie'] ) == false || isset( $_POST['count'] ) == false ) {
-		return;
-	} else {
-		$id = get_post_id( $_POST['movie'], 'movie' );
-	}
-
-	$before = get_post_meta( $id, 'rating', true );
-	$count = get_post_meta( $id, 'rating', true );
-
-	$after = update_post_meta( $id, 'rating', $_POST['count'] );
-
-	wp_die(
-        json_encode(
-            array(
-                'success' => $id,
-                'message' => 'Database updated successfully.'
-            )
-        )
-    );
-
-}
-
-add_action( 'wp_ajax_update-rating', 'rating_updated' );
-add_action( 'wp_ajax_nopriv_update-rating', 'rating_updated' );
-
-
-function get_rating() {
-
-	global $post;
-
-	$slug = $post->post_name;
-	$i = 1;
-	$count = isset( $_COOKIE[$slug] ) ? $_COOKIE[$slug] : 0;
-
-	while( $i <= 5 ) {
-		$class = $i <= $count ? 'full' : '';
-
-		echo '<i class="' . $class . '"></i>';
-		$i++;
-	}
-
-}
-
-
 function register_menus() {
 
 	$menus = [
@@ -95,7 +64,6 @@ function register_menus() {
 }
 
 add_action( 'init', 'register_menus' );
-
 
 function add_taxonomies() {
 
@@ -117,7 +85,6 @@ function add_taxonomies() {
 
 add_action( 'init', 'add_taxonomies' );
 
-
 function custom_theme_setup() {
 
 	$support = [
@@ -132,7 +99,6 @@ function custom_theme_setup() {
 }
 
 add_action( 'after_setup_theme', 'custom_theme_setup' );
-
 
 function remove_menu_items() {
 
@@ -152,7 +118,6 @@ function remove_menu_items() {
 }
 
 add_action( 'admin_init', 'remove_menu_items' );
-
 
 function add_post_types() {
 
@@ -184,13 +149,11 @@ function add_post_types() {
 
 add_action( 'init', 'add_post_types' );
 
-
 function remove_admin_bar_items( $bar ) {
 	$bar->remove_node( 'comments' );
 }
 
 add_action( 'admin_bar_menu', 'remove_admin_bar_items', 999 );
-
 
 function remove_supports() {
 
@@ -218,6 +181,5 @@ function remove_supports() {
 }
 
 add_action( 'init', 'remove_supports' );
-
 
 ?>

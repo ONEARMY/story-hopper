@@ -3,7 +3,6 @@ $( document ).ready( function() {
 	$( '#movie .rating i' ).click( function() {
 
 		var index = $( this ).index(),
-			count = index + 1,
 			slug = document.URL.split( '/' )[4];
 
 		$( this ).closest( '.rating' ).find( 'i' ).each( function() {
@@ -16,19 +15,12 @@ $( document ).ready( function() {
 
 		});
 
-		$.ajax({
-			type: 'POST',
-			url: document.location.origin + '/wp-admin/admin-ajax.php',
-			data: {
-				action: 'update-rating',
-				movie: slug,
-				rating: count
-			}
-		}).done( function( json ) {
-			console.log(json)
-		});
+		var data = {
+			count: index + 1,
+			synced: false
+		};
 
-		document.cookie = slug + '=' + count + '; ' + 'path=/';
+		document.cookie = slug + '=' + window.btoa( JSON.stringify( data ) ) + '; ' + 'path=/';
 
 	});
 
