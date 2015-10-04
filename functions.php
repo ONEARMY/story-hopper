@@ -45,7 +45,10 @@ function rating_updated() {
 		$id = get_post_id( $_POST['movie'], 'movie' );
 	}
 
-	update_post_meta( $id, 'rating', $_POST['count'] );
+	$before = get_post_meta( $id, 'rating', true );
+	$count = get_post_meta( $id, 'rating', true );
+
+	$after = update_post_meta( $id, 'rating', $_POST['count'] );
 
 	wp_die(
         json_encode(
