@@ -31,6 +31,10 @@ select:focus {
 	outline: none;
 }
 
+video::-webkit-media-controls {
+	display: none !important;
+}
+
 .wpcf7-not-valid-tip {
 	background: #F4D1D1;
 	padding: 15px;
