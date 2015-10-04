@@ -28,5 +28,6 @@
 
 		<script src="<?= get_stylesheet_directory_uri() ?>/js/core.js"></script>
 
+		<?php wp_footer() ?>
 	</body>
 </html>

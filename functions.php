@@ -1,5 +1,27 @@
 <?php
 
+
+function manage_menu() {
+
+	global $submenu;
+
+	if( current_user_can( 'manage_options') ) {
+
+		$submenu['options-general.php'][] = [
+			'Savvii',
+			'manage_options',
+			admin_url( 'admin.php' ) . '?page=savvii_dashboard'
+		];
+
+	}
+
+	remove_menu_page( 'savvii_dashboard' );
+
+}
+
+add_action( 'admin_menu', 'manage_menu', 999 );
+
+
 function get_post_id( $slug, $post_type ) {
 
 	$query = new WP_Query([
