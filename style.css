@@ -9,6 +9,10 @@
 
 @import "css/fonts.css";
 
+html, body {
+	height: 100%;
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	margin: 0;
@@ -104,7 +108,7 @@ video::-webkit-media-controls {
 }
 
 #intro {
-	height: 100vh;
+	height: 100%;
 	position: relative;
 	color: #fff;
 	overflow: hidden;
@@ -542,7 +546,7 @@ video::-webkit-media-controls {
 	left: 0;
 	top: 0;
 	width: 100vw;
-	height: 100vh;
+	height: 100%;
 	background: #F2DC9F;
 	display: none;
 	text-align: center;
@@ -838,6 +842,19 @@ video::-webkit-media-controls {
 
 	#movie a:last-child {
 		margin-top: 60px;
+	}
+
+}
+
+@media (min-width: 1200px) {
+
+	#movies .inner:last-child {
+		max-width: 1245px;
+	}
+
+	#movies .item {
+		margin-bottom: 100px;
+		width: 25%;
 	}
 
 }
