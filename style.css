@@ -204,6 +204,7 @@ video::-webkit-media-controls {
 	border-radius: 6px;
 	font-size: 14px;
 	padding: 6px 20px;
+	display:none;
 }
 
 #movies nav a:hover,
@@ -390,7 +391,7 @@ video::-webkit-media-controls {
 	-webkit-transition: all .4s;
 }
 
-#menu li.current-menu-item a, 
+#menu li.current-menu-item a,
 #menu li a:hover {
 	opacity: .5;
 }
