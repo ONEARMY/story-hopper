@@ -1,5 +1,10 @@
 $( document ).ready( function() {
 
+	$( '#menu li:first-child a' ).each( function() {
+		var old = $( this ).attr( 'href' );
+		$( this ).attr( 'href', old + '#movies' );
+	});
+
 	$( '#movie .rating i' ).click( function() {
 
 		var index = $( this ).index(),
