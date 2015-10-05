@@ -9,13 +9,6 @@
 
 @import "css/fonts.css";
 
-
-/*temporary for launch only, remove rollover from thumbnails*/
-.item.nolink {
-    pointer-events: none;
-    cursor: default;
-}
-
 html, body {
 	height: 100%;
 }
@@ -230,6 +223,11 @@ video::-webkit-media-controls {
 #movies .item {
 	margin-bottom: 80px;
 	width: 100%;
+}
+
+#movies .item.nolink {
+	pointer-events: none;
+	cursor: default;
 }
 
 #movies figure {
@@ -594,17 +592,12 @@ video::-webkit-media-controls {
 
 #movie a:last-child {
 	color: #000;
-    background: url(vectors/discuss.png) no-repeat center top;
-    display: block;
-    padding-top: 48px;
-    margin-top: 13%;
-    margin-bottom: 60px;
+	background: url(vectors/discuss.png) no-repeat center top;
+	display: block;
+	padding-top: 48px;
+	margin-top: 13%;
+	margin-bottom: 60px;
 }
-
-
-
-
-
 
 @media (min-width: 768px) {
 
