@@ -9,6 +9,13 @@
 
 @import "css/fonts.css";
 
+
+/*temporary for launch only, remove rollover from thumbnails*/
+.item.nolink {
+    pointer-events: none;
+    cursor: default;
+}
+
 html, body {
 	height: 100%;
 }
@@ -593,6 +600,11 @@ video::-webkit-media-controls {
     margin-top: 13%;
     margin-bottom: 60px;
 }
+
+
+
+
+
 
 @media (min-width: 768px) {
 
