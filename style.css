@@ -46,8 +46,8 @@ video::-webkit-media-controls {
 	margin-bottom: 10px;
 }
 
-.wpcf7-validation-errors {
-	display: none;
+.wpcf7-response-output {
+	display: none !important;
 }
 
 .hide-overflow {
@@ -794,6 +794,8 @@ video::-webkit-media-controls {
 	#apply input[name="poster"] {
 		line-height: 10px;
 		font-size: 12px;
+		padding-top: 12px;
+		padding-bottom: 12px;
 	}
 
 	#about {
