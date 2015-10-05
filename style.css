@@ -523,6 +523,32 @@ video::-webkit-media-controls {
 	margin-bottom: 70px;
 }
 
+#apply label[for="poster"] {
+	display: block;
+	min-height: 20px;
+	margin-top: 50px;
+}
+
+#apply label[for="poster"] b {
+	float: right;
+	background: #5a5a5a;
+	color: #fff;
+	font-size: 11px;
+	padding: 3px 8px;
+	border-radius: 5px;
+	display: block;
+}
+
+#apply label[for="poster"] b:last-child {
+	margin-right: 5px;
+}
+
+#apply label[for="poster"] span {
+	float: left;
+	display: block;
+	font-size: 14px;
+}
+
 #about {
 	text-align: center;
 	padding-top: 90px;
@@ -757,6 +783,17 @@ video::-webkit-media-controls {
 
 	#apply input[type="submit"]:hover {
 		background: #C7AE66;
+	}
+
+	#apply label[for="poster"] span {
+		float: left;
+		display: block;
+		font-size: 16px;
+	}
+
+	#apply input[name="poster"] {
+		line-height: 10px;
+		font-size: 12px;
 	}
 
 	#about {
