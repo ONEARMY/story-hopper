@@ -8,7 +8,8 @@ $( document ).ready( function() {
 	$( '#movie .rating i' ).click( function() {
 
 		var index = $( this ).index(),
-			slug = document.URL.split( '/' )[4];
+			slug = document.URL.split( '/' )[4],
+			date = new Date();
 
 		$( this ).closest( '.rating' ).find( 'i' ).each( function() {
 
@@ -25,7 +26,8 @@ $( document ).ready( function() {
 			synced: false
 		};
 
-		document.cookie = slug + '=' + window.btoa( JSON.stringify( data ) ) + '; ' + 'path=/';
+		date.setDate( date.getDate() + 1200 );
+		document.cookie = slug + '=' + window.btoa( JSON.stringify( data ) ) + '; ' + 'path=/; expires=' + date.toUTCString() + ';';
 
 	});
 

@@ -2,7 +2,7 @@
 <html>
 
 	<head>
-	
+
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -18,7 +18,7 @@
 
 		<link rel="stylesheet" href="<?= get_stylesheet_uri() ?>">
 		<link href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,300,300italic" rel="stylesheet" type="text/css">
-
+		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 		<?php wp_head() ?>
 
 	</head>
