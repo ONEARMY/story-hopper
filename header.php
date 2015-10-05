@@ -18,7 +18,8 @@
 
 		<link rel="stylesheet" href="<?= get_stylesheet_uri() ?>">
 		<link href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,300,300italic" rel="stylesheet" type="text/css">
-		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
+		<link rel="shortcut icon" href="<?= get_stylesheet_directory_uri(); ?>/favicon.ico" />
+
 		<?php wp_head() ?>
 
 	</head>
