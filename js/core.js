@@ -1,8 +1,19 @@
 $( document ).ready( function() {
 
 	$( '#menu li:first-child a' ).each( function() {
+
 		var old = $( this ).attr( 'href' );
+		
+		$( this ).click( function( e ) {
+
+			if( $( '#movies' ).length > 0 ) {
+				$( '#intro .toggle-nav' ).trigger( 'click' );
+			}
+
+		});
+
 		$( this ).attr( 'href', old + '#movies' );
+
 	});
 
 	$( '#movie .rating i' ).click( function() {
