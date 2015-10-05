@@ -751,6 +751,10 @@ video::-webkit-media-controls {
 		font-size: 12px;
 	}
 
+	#apply input[type="submit"] {
+		width: auto;
+	}
+
 	#apply input[type="submit"]:hover {
 		background: #C7AE66;
 	}
