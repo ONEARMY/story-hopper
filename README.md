@@ -1,3 +1,3 @@
 # hopper
 
-Story hopper's official repo
+Story hopper's official repository
