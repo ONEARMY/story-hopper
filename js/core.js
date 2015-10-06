@@ -111,7 +111,8 @@ $( document ).ready( function() {
 		var id = $( this ).attr( 'href' ).split( 'v=' )[1],
 			href = 'https://www.youtube.com/embed/' + id,
 			title = $( this ).find( 'span' ).html(),
-			discuss = $( this ).attr( 'data-discussion' );
+			discuss = $( this ).attr( 'data-discussion' ),
+			rating = $( this ).find( '.rating' ).html();
 
 		var movie = $( '#movie' );
 
@@ -120,6 +121,7 @@ $( document ).ready( function() {
 		movie.find( 'iframe' ).attr( 'src', href );
 		movie.find( 'h1' ).html( title );
 
+		movie.find( '.rating' ).html( rating );
 		movie.fadeIn( 300 );
 
 		var url = '/movie/' + $( this ).attr( 'data-slug' );
