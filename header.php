@@ -14,11 +14,12 @@
 		</script>
 
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta property="og:image" content="<?= get_stylesheet_directory_uri(); ?>/images/og.png" />
 
 		<link rel="stylesheet" href="<?= get_stylesheet_uri() ?>">
 		<link href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,300,300italic" rel="stylesheet" type="text/css">
-		<link rel="shortcut icon" href="<?= get_stylesheet_directory_uri(); ?>/favicon.ico" />
+		<link rel="shortcut icon" href="<?= get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
 
 		<?php wp_head() ?>
 

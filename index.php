@@ -75,7 +75,7 @@
 
 					<figcaption>
 
-						<img src="<?= get_stylesheet_directory_uri() ?>/vectors/play.png">
+						<img src="<?= get_stylesheet_directory_uri() ?>/images/play.png">
 
 						<div class="rating">
 							<?php get_rating() ?>
