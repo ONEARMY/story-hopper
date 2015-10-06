@@ -241,52 +241,16 @@ video::-webkit-media-controls {
 	box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.35);
 }
 
-#movies figcaption {
-	position: absolute;
-	opacity: 0;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(0, 0, 0, 0.5);
-	transition: 0.3s opacity;
-}
-
-#movies a:hover figcaption {
-	opacity: 10;
-}
-
-#movies figcaption img {
-	margin-top: 45%;
-}
-
-#movies .rating {
-	position: absolute;
-	width: 100%;
-	bottom: 35px;
-}
-
-#movies .rating i {
-	width: 25px;
-	height: 25px;
-	display: inline-block;
-	background: url( vectors/stars/empty.png ) no-repeat center center;
-}
-
-#movies i.full {
-	background-image: url( vectors/stars/full.png );
-}
-
-#movies i.half {
-	background-image: url( vectors/stars/half.png );
-}
-
 #movies span {
 	font-size: 18px;
 	padding-top: 15px;
 	color: #000;
 	display: block;
 	font-weight: 100;
+}
+
+#movies figcaption {
+	display: none;
 }
 
 #info {
@@ -851,6 +815,47 @@ video::-webkit-media-controls {
 		margin-bottom: 100px;
 		width: 33.3333%;
 		width: calc( 100% / 3 );
+	}
+
+	#movies figcaption {
+		display: block;
+		position: absolute;
+		opacity: 0;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.5);
+		transition: 0.3s opacity;
+	}
+
+	#movies a:hover figcaption {
+		opacity: 10;
+	}
+
+	#movies figcaption img {
+		margin-top: 45%;
+	}
+
+	#movies .rating {
+		position: absolute;
+		width: 100%;
+		bottom: 35px;
+	}
+
+	#movies .rating i {
+		width: 25px;
+		height: 25px;
+		display: inline-block;
+		background: url( vectors/stars/empty.png ) no-repeat center center;
+	}
+
+	#movies i.full {
+		background-image: url( vectors/stars/full.png );
+	}
+
+	#movies i.half {
+		background-image: url( vectors/stars/half.png );
 	}
 
 	#menu h1 {
