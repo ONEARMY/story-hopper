@@ -5,7 +5,7 @@
 function capture_rating( $post ) {
 
 	$slug = $post->post_name;
-	$cookie = isset( $_COOKIE[$slug] ) ? json_decode( $_COOKIE[$slug] ) : false;
+	$cookie = isset( $_COOKIE[$slug] ) ? json_decode( stripslashes( urldecode( $_COOKIE[$slug] ) ) ) : false;
 	$current = [];
 
 	$old = [
@@ -31,7 +31,7 @@ function capture_rating( $post ) {
 	$cookie->synced = true;
 	$expire = time() + ( 10 * 365 * 24 * 60 * 60 );
 
-	setcookie( $slug, json_encode( $cookie ), $expire, '/' );
+	setrawcookie( $slug, urlencode( json_encode( $cookie ) ), $expire, '/' );
 
 }
 
@@ -66,9 +66,18 @@ function single_rating() {
 
 	global $post;
 
+	if( substr( $_COOKIE[$slug], -1 ) == '=' ) {
+		return;
+	}
+
 	$slug = $post->post_name;
 	$i = 1;
-	$count = isset( $_COOKIE[$slug] ) ? json_decode( $_COOKIE[$slug] )->count : 0;
+
+	if( isset( $_COOKIE[$slug] ) ) {
+		$count = substr( $_COOKIE[$slug], -1 ) == '=' ? 0 : json_decode( stripslashes( urldecode( $_COOKIE[$slug] ) ) )->count;
+	} else {
+		$count = 0;
+	}
 
 	while( $i <= 5 ) {
 		$class = $i <= $count ? 'full' : '';
@@ -105,6 +114,10 @@ function look_for_ratings() {
 	}
 
 	foreach( $_COOKIE as $name => $value ) {
+
+		if( substr( $value, -1 ) == '=' ) {
+			continue;
+		}
 
 		$is_movie = get_page_by_path( esc_sql( $name ), OBJECT, 'movie' );
 

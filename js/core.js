@@ -20,7 +20,7 @@ var setRating = function() {
 	};
 
 	date.setDate( date.getDate() + 1200 );
-	document.cookie = slug + '=' + JSON.stringify( data ) + '; ' + 'path=/; expires=' + date.toUTCString() + ';';
+	document.cookie = slug + '=' + encodeURIComponent( JSON.stringify( data ) ) + '; ' + 'path=/; expires=' + date.toUTCString() + ';';
 
 }
 
@@ -35,8 +35,12 @@ var getRating = function( slug ) {
 
 		var mixed = singles[cookie].split( '=' );
 
+		if( mixed[1].slice( -1 ) == '0' ) {
+			continue;
+		}
+
 		if( mixed[0] == slug ) {
-			data = JSON.parse( mixed[1] ).count;
+			data = JSON.parse( decodeURIComponent( mixed[1] ) ).count;
 			break;
 		}
 
