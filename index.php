@@ -112,8 +112,23 @@
 			<i></i>
 		</div>
 
-		<iframe width="854" height="480" src="https://www.youtube.com/embed/oDAw7vW7H0c" frameborder="0" allowfullscreen></iframe>
-		<a href="#" target="_blank">discuss this video</a>
+		<div class="direction">
+
+			<a href="#" class="prev">
+				<?php include( 'images/arrow-left.svg' ) ?>
+			</a>
+
+			<a href="#" class="next">
+				<?php include( 'images/arrow-right.svg' ) ?>
+			</a>
+
+		</div>
+
+		<iframe width="854" height="480" src="https://www.youtube.com/embed/oDAw7vW7H0c" frameborder="0" allowfullscreen>
+		</iframe>
+
+		<a href="#" target="_blank" class="discuss">discuss this video</a>
+
 	</div>
 
 </section>

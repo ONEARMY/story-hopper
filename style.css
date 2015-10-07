@@ -581,13 +581,17 @@ video::-webkit-media-controls {
 	background-image: url(images/stars/half.svg);
 }
 
-#movie a:last-child {
+#movie .discuss {
 	color: #000;
 	background: url(images/discuss.png) no-repeat center top;
 	display: block;
 	padding-top: 48px;
 	margin-top: 13%;
 	margin-bottom: 60px;
+}
+
+#movie .direction {
+	display: none;
 }
 
 @media (min-width: 768px) {
@@ -893,10 +897,48 @@ video::-webkit-media-controls {
 
 	#movie .inner {
 		width: 850px;
+		position: relative;
 	}
 
-	#movie a:last-child {
+	#movie .discuss {
 		margin-top: 60px;
+	}
+
+	#movie .direction {
+		display: block;
+		margin: 0 -10%;
+		position: absolute;
+		width: 120%;
+		top: 50%;
+	}
+
+	#movie .direction a {
+		cursor: pointer;
+		display: block;
+		padding: 20px;
+	}
+
+	#movie .direction a[href="#"] {
+		visibility: hidden;
+	}
+
+	#movie .direction svg {
+		width: 24px;
+		height: 30px;
+	}
+
+	#movie .direction:after {
+		clear: both;
+		content: "";
+		display: table;
+	}
+
+	#movie .prev {
+		float: left;
+	}
+
+	#movie .next {
+		float: right;
 	}
 
 }

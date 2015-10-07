@@ -2,6 +2,21 @@
 
 // Unhooked functions
 
+function post_direction( $dir ) {
+
+	$next = $dir == 'next' ? get_next_post() : get_previous_post();
+
+	if( empty( $next ) ) {
+		return '#';
+	}
+
+	$categories = get_the_terms( $next->ID, 'movie_category' );
+	$url = $categories[0]->slug == 'nolink' ? '#' : get_permalink( $next->ID );
+
+	return $url;
+
+}
+
 function get_post_id( $slug, $post_type ) {
 
 	$query = new WP_Query([
