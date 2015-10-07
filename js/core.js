@@ -16,7 +16,7 @@ $( document ).ready( function() {
 
 	});
 
-	$( '#movie .rating i' ).click( function() {
+	var setRating = function() {
 
 		var index = $( this ).index(),
 			slug = document.URL.split( '/' )[4],
@@ -40,7 +40,7 @@ $( document ).ready( function() {
 		date.setDate( date.getDate() + 1200 );
 		document.cookie = slug + '=' + window.btoa( JSON.stringify( data ) ) + '; ' + 'path=/; expires=' + date.toUTCString() + ';';
 
-	});
+	}
 
 	if( jQuery().isotope ) {
 
@@ -49,6 +49,8 @@ $( document ).ready( function() {
 		});
 
 	}
+
+	$( '#movie.single .rating i' ).click( setRating );
 
 	$( '#movies nav a' ).click( function(e) {
 
@@ -122,7 +124,10 @@ $( document ).ready( function() {
 		movie.find( 'h1' ).html( title );
 
 		movie.find( '.rating' ).html( rating );
-		movie.fadeIn( 300 );
+
+		movie.fadeIn( 300, function() {
+			movie.find( '.rating i' ).click( setRating );
+		});
 
 		var url = '/movie/' + $( this ).attr( 'data-slug' );
 
