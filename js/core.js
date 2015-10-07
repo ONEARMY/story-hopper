@@ -20,7 +20,34 @@ var setRating = function() {
 	};
 
 	date.setDate( date.getDate() + 1200 );
-	document.cookie = slug + '=' + window.btoa( JSON.stringify( data ) ) + '; ' + 'path=/; expires=' + date.toUTCString() + ';';
+	document.cookie = slug + '=' + JSON.stringify( data ) + '; ' + 'path=/; expires=' + date.toUTCString() + ';';
+
+}
+
+var getRating = function( slug ) {
+
+	var cookies = document.cookie,
+		singles = cookies.split( '; ' ),
+		html = '',
+		data = 0;
+
+	for( cookie in singles ) {
+
+		var mixed = singles[cookie].split( '=' );
+
+		if( mixed[0] == slug ) {
+			data = JSON.parse( mixed[1] ).count;
+			break;
+		}
+
+	}
+
+	for( i = 1; i < 6; i++ ) {
+		var attr = i <= data ? 'full' : '';
+		html += '<i class="' + attr + '"></i>';
+	}
+
+	return html;
 
 }
 
@@ -45,7 +72,7 @@ var switchMovie = function( id, event ) {
 	var href = '//www.youtube.com/embed/' + id,
 		title = $( this ).find( 'span' ).html(),
 		discuss = $( this ).attr( 'data-discussion' ),
-		rating = $( this ).find( '.rating' ).html();
+		slug = $( this ).attr( 'data-slug' );
 
 	var movie = $( '#movie' );
 
@@ -53,15 +80,15 @@ var switchMovie = function( id, event ) {
 
 	movie.find( 'iframe' ).attr( 'src', href );
 	movie.find( 'h1' ).html( title );
-	movie.find( '.rating' ).html( rating );
-
+	
+	movie.find( '.rating' ).html( getRating.bind( this, slug ) );
 	movie.find( '.direction' ).each( calibrateDir.bind( this, id, movie ) );
 
 	movie.fadeIn( 300, function() {
 		movie.find( '.rating i' ).click( setRating );
 	});
 
-	var url = '/movie/' + $( this ).attr( 'data-slug' );
+	var url = '/movie/' + slug;
 
 	$( 'body' ).data( 'old-title', document.title );
 	document.title = title + ' | Story Hopper';

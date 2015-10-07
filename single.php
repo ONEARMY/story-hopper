@@ -26,7 +26,7 @@ $discussion = $state == 0 ? $video : get_field( 'discussion_url' );
 		<h1><?php the_title() ?></h1>
 
 		<div class="rating">
-			<?php get_rating() ?>
+			<?php single_rating() ?>
 		</div>
 
 		<div class="direction">

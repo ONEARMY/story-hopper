@@ -2,6 +2,39 @@
 
 // Unhooked functions
 
+function capture_rating( $post ) {
+
+	$slug = $post->post_name;
+	$cookie = isset( $_COOKIE[$slug] ) ? json_decode( $_COOKIE[$slug] ) : false;
+	$current = [];
+
+	$old = [
+		'rating_count',
+		'rating_amount'
+	];
+
+	if( !$cookie || $cookie->synced ) {
+		return;
+	}
+
+	foreach( $old as $key => $value ) {
+		$name = explode( '_', $value )[1];
+		$get = get_post_meta( $post->ID, $value, true );
+		$current[$name] = !empty( $get ) ? $get : 0;
+	}
+
+	foreach( $old as $key => $value ) {
+		$new = strpos( $value, 'count' ) !== false ? $current['count'] + 1 : $cookie->count + $current['amount'];
+		update_post_meta( $post->ID, $value, $new );
+	}
+
+	$cookie->synced = true;
+	$expire = time() + ( 10 * 365 * 24 * 60 * 60 );
+
+	setcookie( $slug, json_encode( $cookie ), $expire, '/' );
+
+}
+
 function post_direction( $dir ) {
 
 	$next = $dir == 'next' ? get_next_post() : get_previous_post();
@@ -29,13 +62,13 @@ function get_post_id( $slug, $post_type ) {
 
 }
 
-function get_rating() {
+function single_rating() {
 
 	global $post;
 
 	$slug = $post->post_name;
 	$i = 1;
-	$count = isset( $_COOKIE[$slug] ) ? json_decode( base64_decode($_COOKIE[$slug] ) )->count : 0;
+	$count = isset( $_COOKIE[$slug] ) ? json_decode( $_COOKIE[$slug] )->count : 0;
 
 	while( $i <= 5 ) {
 		$class = $i <= $count ? 'full' : '';
@@ -45,7 +78,47 @@ function get_rating() {
 
 }
 
+function get_average() {
+
+	global $post;
+
+	$i = 1;
+	$count = get_post_meta( $post->ID, 'rating_count', true );
+	$amount = get_post_meta( $post->ID, 'rating_amount', true );
+
+	$all = round( $amount / $count );
+
+	while( $i <= 5 ) {
+		$class = $i <= $all ? 'full' : '';
+		echo '<i class="' . $class . '"></i>';
+		$i++;
+	}
+
+}
+
 // Hooked functions
+
+function look_for_ratings() {
+
+	if( is_admin() ) {
+		return;
+	}
+
+	foreach( $_COOKIE as $name => $value ) {
+
+		$is_movie = get_page_by_path( esc_sql( $name ), OBJECT, 'movie' );
+
+		if( !$is_movie ) {
+			continue;
+		}
+
+		capture_rating( $is_movie );
+
+	}
+
+}
+
+add_action( 'init', 'look_for_ratings' );
 
 function manage_menu() {
 

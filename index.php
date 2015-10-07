@@ -78,7 +78,7 @@
 						<img src="<?= get_stylesheet_directory_uri() ?>/images/play.png">
 
 						<div class="rating">
-							<?php get_rating() ?>
+							<?php get_average() ?>
 						</div>
 
 					</figcaption>
