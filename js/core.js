@@ -42,7 +42,7 @@ var calibrateDir = function( id, movie ) {
 
 var switchMovie = function( id, event ) {
 
-	var href = 'https://www.youtube.com/embed/' + id,
+	var href = '//www.youtube.com/embed/' + id,
 		title = $( this ).find( 'span' ).html(),
 		discuss = $( this ).attr( 'data-discussion' ),
 		rating = $( this ).find( '.rating' ).html();
@@ -60,17 +60,6 @@ var switchMovie = function( id, event ) {
 	movie.fadeIn( 300, function() {
 
 		movie.find( '.rating i' ).click( setRating );
-
-		movie.find( '.direction a' ).click( function( event ) {
-
-			if( $( this ).attr( 'href' ) == '#' ) {
-				return;
-			}
-
-			var id = $( this ).attr( 'href' ).split( 'v=' )[1];
-			switchMovie.call( $( '#movies a[href*="' + id + '"]' ), id, event );
-
-		});
 
 	});
 
@@ -116,6 +105,17 @@ $( document ).ready( function() {
 	}
 
 	$( '#movie.single .rating i' ).click( setRating );
+
+	$( '#movie:not(.single) .direction a' ).on( 'click', function( event ) {
+
+		if( $( this ).attr( 'href' ) == '#' ) {
+			return;
+		}
+
+		var id = $( this ).attr( 'href' ).split( 'v=' )[1];
+		switchMovie.call( $( '#movies a[href*="' + id + '"]' ), id, event );
+
+	});
 
 	$( '#movies nav a' ).click( function(e) {
 
