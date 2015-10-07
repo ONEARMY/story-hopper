@@ -58,9 +58,7 @@ var switchMovie = function( id, event ) {
 	movie.find( '.direction' ).each( calibrateDir.bind( this, id, movie ) );
 
 	movie.fadeIn( 300, function() {
-
 		movie.find( '.rating i' ).click( setRating );
-
 	});
 
 	var url = '/movie/' + $( this ).attr( 'data-slug' );
