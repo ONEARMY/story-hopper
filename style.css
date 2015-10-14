@@ -316,7 +316,6 @@ video::-webkit-media-controls {
 	font-size: 18px;
 	line-height: 24px;
 	margin: 0 0 100px;
-	display: none;
 }
 
 #info p a {
