@@ -350,6 +350,10 @@ video::-webkit-media-controls {
 	margin: 38px 0;
 }
 
+#menu li:last-child {
+	margin-top: -9px;
+}
+
 #menu li a {
 	text-indent: -99999px;
 	display: block;
