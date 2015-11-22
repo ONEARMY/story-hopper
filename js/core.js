@@ -128,7 +128,8 @@ $( document ).ready( function() {
 	if( jQuery().isotope ) {
 
 		var grid = $( '#movies .inner:last-child' ).isotope({
-			itemSelector: '.item'
+			itemSelector: '.item',
+			filter: '.original'
 		});
 
 	}

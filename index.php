@@ -40,9 +40,19 @@
 			];
 
 			$categories = get_terms( 'movie_category', $args );
+			$count = 0;
 
 			foreach( $categories as $category ) {
-				echo '<a href="#' . $category->slug . '">' . strtolower( $category->name ) . '</a>';
+
+				if( $count == 0 ) {
+					echo '<a href="#' . $category->slug . '" class="active">';
+				} else {
+					echo '<a href="#' . $category->slug . '">';
+				}
+
+				echo strtolower( $category->name ) . '</a>';
+				$count++;
+
 			}
 
 			?>
@@ -56,7 +66,7 @@
 
 		$args = [
 			'post_type' => 'movie',
-			'order'    => 'ASC'
+			'order'    => 'DESC'
 		];
 
 		query_posts( $args );

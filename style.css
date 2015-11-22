@@ -204,7 +204,7 @@ video::-webkit-media-controls {
 	border-radius: 6px;
 	font-size: 14px;
 	padding: 6px 20px;
-	display: none;
+	display: block;
 }
 
 #movies nav a:hover,
