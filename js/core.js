@@ -1,213 +1,213 @@
 var setRating = function() {
 
-	var index = $( this ).index(),
-		slug = document.URL.split( '/' )[4],
-		date = new Date();
+  var index = $( this ).index(),
+    slug = document.URL.split( '/' )[4],
+    date = new Date();
 
-	$( this ).closest( '.rating' ).find( 'i' ).each( function() {
+  $( this ).closest( '.rating' ).find( 'i' ).each( function() {
 
-		if( $( this ).index() <= index ) {
-			$( this ).addClass( 'full' );
-		} else {
-			$( this ).removeClass( 'full' );
-		}
+    if( $( this ).index() <= index ) {
+      $( this ).addClass( 'full' );
+    } else {
+      $( this ).removeClass( 'full' );
+    }
 
-	});
+  });
 
-	var data = {
-		count: index + 1,
-		synced: false
-	};
+  var data = {
+    count: index + 1,
+    synced: false
+  };
 
-	date.setDate( date.getDate() + 1200 );
-	document.cookie = slug + '=' + encodeURIComponent( JSON.stringify( data ) ) + '; ' + 'path=/; expires=' + date.toUTCString() + ';';
+  date.setDate( date.getDate() + 1200 );
+  document.cookie = slug + '=' + encodeURIComponent( JSON.stringify( data ) ) + '; ' + 'path=/; expires=' + date.toUTCString() + ';';
 
 }
 
 var getRating = function( slug ) {
 
-	var cookies = document.cookie,
-		singles = cookies.split( '; ' ),
-		html = '',
-		data = 0;
+  var cookies = document.cookie,
+    singles = cookies.split( '; ' ),
+    html = '',
+    data = 0;
 
-	for( cookie in singles ) {
+  for( cookie in singles ) {
 
-		var mixed = singles[cookie].split( '=' );
+    var mixed = singles[cookie].split( '=' );
 
-		if( mixed[1].slice( -1 ) == '0' ) {
-			continue;
-		}
+    if( mixed[1].slice( -1 ) == '0' ) {
+      continue;
+    }
 
-		if( mixed[0] == slug ) {
-			data = JSON.parse( decodeURIComponent( mixed[1] ) ).count;
-			break;
-		}
+    if( mixed[0] == slug ) {
+      data = JSON.parse( decodeURIComponent( mixed[1] ) ).count;
+      break;
+    }
 
-	}
+  }
 
-	for( i = 1; i < 6; i++ ) {
-		var attr = i <= data ? 'full' : '';
-		html += '<i class="' + attr + '"></i>';
-	}
+  for( i = 1; i < 6; i++ ) {
+    var attr = i <= data ? 'full' : '';
+    html += '<i class="' + attr + '"></i>';
+  }
 
-	return html;
+  return html;
 
 }
 
 var calibrateDir = function( id, movie ) {
 
-	var current = $( '#movies a[href*="' + id + '"]' ).closest( '.item' ),
-		next = current.next(),
-		previous = current.prev();
+  var current = $( '#movies a[href*="' + id + '"]' ).closest( '.item' ),
+    next = current.next(),
+    previous = current.prev();
 
-	movie.find( '.next' ).attr( 'href', function() {
-		return !next[0] || next.hasClass( 'nolink' ) ? '#' : next.find( 'a' ).attr( 'href' );
-	});
+  movie.find( '.next' ).attr( 'href', function() {
+    return !next[0] || next.hasClass( 'nolink' ) ? '#' : next.find( 'a' ).attr( 'href' );
+  });
 
-	movie.find( '.prev' ).attr( 'href', function() {
-		return !previous[0] || previous.hasClass( 'nolink' ) ? '#' : previous.find( 'a' ).attr( 'href' );
-	});
+  movie.find( '.prev' ).attr( 'href', function() {
+    return !previous[0] || previous.hasClass( 'nolink' ) ? '#' : previous.find( 'a' ).attr( 'href' );
+  });
 
 }
 
 var switchMovie = function( id, event ) {
 
-	var href = '//www.youtube.com/embed/' + id,
-		title = $( this ).find( 'span' ).html(),
-		discuss = $( this ).attr( 'data-discussion' ),
-		slug = $( this ).attr( 'data-slug' );
+  var href = '//www.youtube.com/embed/' + id,
+    title = $( this ).find( 'span' ).html(),
+    discuss = $( this ).attr( 'data-discussion' ),
+    slug = $( this ).attr( 'data-slug' );
 
-	var movie = $( '#movie' );
+  var movie = $( '#movie' );
 
-	$( 'body' ).addClass( 'hide-overflow' );
+  $( 'body' ).addClass( 'hide-overflow' );
 
-	movie.find( 'iframe' ).attr( 'src', href );
-	movie.find( 'h1' ).html( title );
-	
-	movie.find( '.rating' ).html( getRating.bind( this, slug ) );
-	movie.find( '.direction' ).each( calibrateDir.bind( this, id, movie ) );
+  movie.find( 'iframe' ).attr( 'src', href );
+  movie.find( 'h1' ).html( title );
 
-	movie.fadeIn( 300, function() {
-		movie.find( '.rating i' ).click( setRating );
-	});
+  movie.find( '.rating' ).html( getRating.bind( this, slug ) );
+  movie.find( '.direction' ).each( calibrateDir.bind( this, id, movie ) );
 
-	var url = '/movie/' + slug;
+  movie.fadeIn( 300, function() {
+    movie.find( '.rating i' ).click( setRating );
+  });
 
-	$( 'body' ).data( 'old-title', document.title );
-	document.title = title + ' | Story Hopper';
+  var url = '/movie/' + slug;
 
-	window.history.pushState( null, null, url );
+  $( 'body' ).data( 'old-title', document.title );
+  document.title = title + ' | Story Hopper';
 
-	movie.find( '.discuss' ).attr( 'href', function() {
-		return discuss == 'same' ? $( this ).attr( 'href' ) : discuss;
-	}.bind( this ));
+  window.history.pushState( null, null, url );
 
-	event.preventDefault();
+  movie.find( '.discuss' ).attr( 'href', function() {
+    return discuss == 'same' ? $( this ).attr( 'href' ) : discuss;
+  }.bind( this ));
+
+  event.preventDefault();
 
 }
 
 $( document ).ready( function() {
 
-	$( '#menu li:first-child a' ).each( function() {
+  $( '#menu li:first-child a' ).each( function() {
 
-		var old = $( this ).attr( 'href' );
-		
-		$( this ).click( function( e ) {
+    var old = $( this ).attr( 'href' );
 
-			if( $( '#movies' ).length > 0 ) {
-				$( '#intro .toggle-nav' ).trigger( 'click' );
-			}
+    $( this ).click( function( e ) {
 
-		});
+      if( $( '#movies' ).length > 0 ) {
+        $( '#intro .toggle-nav' ).trigger( 'click' );
+      }
 
-		$( this ).attr( 'href', old + '#movies' );
+    });
 
-	});
+    $( this ).attr( 'href', old + '#movies' );
 
-	if( jQuery().isotope ) {
+  });
 
-		var grid = $( '#movies .inner:last-child' ).isotope({
-			itemSelector: '.item',
-			filter: '.original'
-		});
+  if( jQuery().isotope ) {
 
-	}
+    var grid = $( '#movies .inner:last-child' ).isotope({
+      itemSelector: '.item',
+      filter: '.original'
+    });
 
-	$( '#movie.single .rating i' ).click( setRating );
+  }
 
-	$( '#movie:not(.single) .direction a' ).on( 'click', function( event ) {
+  $( '#movie.single .rating i' ).click( setRating );
 
-		if( $( this ).attr( 'href' ) == '#' ) {
-			return;
-		}
+  $( '#movie:not(.single) .direction a' ).on( 'click', function( event ) {
 
-		var id = $( this ).attr( 'href' ).split( 'v=' )[1];
-		switchMovie.call( $( '#movies a[href*="' + id + '"]' ), id, event );
+    if( $( this ).attr( 'href' ) == '#' ) {
+      return;
+    }
 
-	});
+    var id = $( this ).attr( 'href' ).split( 'v=' )[1];
+    switchMovie.call( $( '#movies a[href*="' + id + '"]' ), id, event );
 
-	$( '#movies nav a' ).click( function(e) {
+  });
 
-		var group = $( this ).attr( 'href' ).split( '#' )[1],
-			isActive = $( this ).hasClass( 'active' );
+  $( '#movies nav a' ).click( function(e) {
 
-		grid.isotope({
-			filter: isActive ? '*' : '.' + group
-		});
+    var group = $( this ).attr( 'href' ).split( '#' )[1],
+      isActive = $( this ).hasClass( 'active' );
 
-		if( !isActive ) {
-			$( this ).closest( 'nav' ).find( '.active' ).removeClass( 'active' );
-		}
+    grid.isotope({
+      filter: isActive ? '*' : '.' + group
+    });
 
-		$( this ).toggleClass( 'active' );
-		e.preventDefault();
+    if( !isActive ) {
+      $( this ).closest( 'nav' ).find( '.active' ).removeClass( 'active' );
+    }
 
-	});
+    $( this ).toggleClass( 'active' );
+    e.preventDefault();
 
-	$( '#intro footer a' ).click( function(e) {
+  });
 
-		var href = $( this ).attr( 'href' );
+  $( '#intro footer a' ).click( function(e) {
 
-		$( 'html, body' ).animate({
-			scrollTop: $( href ).offset().top
-		}, 'slow');
+    var href = $( this ).attr( 'href' );
 
-		e.preventDefault();
+    $( 'html, body' ).animate({
+      scrollTop: $( href ).offset().top
+    }, 'slow');
 
-	});
+    e.preventDefault();
 
-	$( '.toggle-nav' ).click( function(e) {
+  });
 
-		if( $( e.target ).closest( 'a' ).length ) {
-			return;
-		}
+  $( '.toggle-nav' ).click( function(e) {
 
-		$( 'body' ).toggleClass( 'hide-overflow' );
+    if( $( e.target ).closest( 'a' ).length ) {
+      return;
+    }
 
-		if( $( this ).parent().attr( 'id' ) == 'movie' ) {
+    $( 'body' ).toggleClass( 'hide-overflow' );
 
-			var video = $( '#movie' );
+    if( $( this ).parent().attr( 'id' ) == 'movie' ) {
 
-			video.fadeToggle( 300, function() {
-				video.find( 'iframe' ).attr( 'src', null );
-			});
+      var video = $( '#movie' );
 
-			document.title = $( 'body' ).data( 'old-title' );
-			window.history.pushState( null, null, '/' );
+      video.fadeToggle( 300, function() {
+        video.find( 'iframe' ).attr( 'src', null );
+      });
 
-		} else {
-			$( '#menu' ).fadeToggle();
-			$( this ).toggleClass( 'on' );
-		}
+      document.title = $( 'body' ).data( 'old-title' );
+      window.history.pushState( null, null, '/' );
 
-	});
+    } else {
+      $( '#menu' ).fadeToggle();
+      $( this ).toggleClass( 'on' );
+    }
 
-	$( '#movies a[href*="you"]' ).click( function( event ) {
-		var id = $( this ).attr( 'href' ).split( 'v=' )[1];
-		switchMovie.call( this, id, event );
-	});
+  });
 
-	$( '#about, #movie' ).fitVids();
+  $( '#movies a[href*="you"]' ).click( function( event ) {
+    var id = $( this ).attr( 'href' ).split( 'v=' )[1];
+    switchMovie.call( this, id, event );
+  });
+
+  $( '#about, #movie' ).fitVids();
 
 });

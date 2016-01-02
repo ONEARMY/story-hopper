@@ -2,144 +2,144 @@
 
 <section id="intro">
 
-	<video muted loop autoplay>
-		<source src="<?php the_field( 'video' ) ?>" type="video/mp4">
-	</video>
+  <video muted loop autoplay>
+    <source src="<?php the_field( 'video' ) ?>" type="video/mp4">
+  </video>
 
-	<article>
+  <article>
 
-		<span class="toggle-nav">
-			<b></b>
-			<b></b>
-			<b></b>
-		</span>
+    <span class="toggle-nav">
+      <b></b>
+      <b></b>
+      <b></b>
+    </span>
 
-		<hgroup>
-			<h1><?php bloginfo( 'name' ) ?></h1>
-			<h2><?php bloginfo( 'description' ) ?></h2>
-		</hgroup>
+    <hgroup>
+      <h1><?php bloginfo( 'name' ) ?></h1>
+      <h2><?php bloginfo( 'description' ) ?></h2>
+    </hgroup>
 
-		<footer>
-			<a href="#movies">watch videos</a>
-		</footer>
+    <footer>
+      <a href="#movies">watch videos</a>
+    </footer>
 
-	</article>
+  </article>
 
 </section>
 
 <section id="movies">
 
-	<div class="inner">
-		<h1>the stories</h1>
+  <div class="inner">
+    <h1>the stories</h1>
 
-		<nav>
-			<?php
+    <nav>
+      <?php
 
-			$args = [
-				'hide_empty' => 0
-			];
+      $args = [
+        'hide_empty' => 0
+      ];
 
-			$categories = get_terms( 'movie_category', $args );
-			$count = 0;
+      $categories = get_terms( 'movie_category', $args );
+      $count = 0;
 
-			foreach( $categories as $category ) {
+      foreach( $categories as $category ) {
 
-				if( $count == 0 ) {
-					echo '<a href="#' . $category->slug . '" class="active">';
-				} else {
-					echo '<a href="#' . $category->slug . '">';
-				}
+        if( $count == 0 ) {
+          echo '<a href="#' . $category->slug . '" class="active">';
+        } else {
+          echo '<a href="#' . $category->slug . '">';
+        }
 
-				echo strtolower( $category->name ) . '</a>';
-				$count++;
+        echo strtolower( $category->name ) . '</a>';
+        $count++;
 
-			}
+      }
 
-			?>
-		</nav>
+      ?>
+    </nav>
 
-	</div>
+  </div>
 
-	<div class="inner">
+  <div class="inner">
 
-		<?php
+    <?php
 
-		$args = [
-			'post_type' => 'movie',
-			'order'    => 'DESC'
-		];
+    $args = [
+      'post_type' => 'movie',
+      'order'    => 'DESC'
+    ];
 
-		query_posts( $args );
-		while ( have_posts() ) : the_post();
+    query_posts( $args );
+    while ( have_posts() ) : the_post();
 
-		$categories = get_the_terms( get_the_ID(), 'movie_category' );
-		$video = get_field( 'url' );
-		$discussion = get_field( 'discussion' ) == 0 ? 'same' : get_field( 'discussion_url' );
+    $categories = get_the_terms( get_the_ID(), 'movie_category' );
+    $video = get_field( 'url' );
+    $discussion = get_field( 'discussion' ) == 0 ? 'same' : get_field( 'discussion_url' );
 
-		?>
+    ?>
 
-		<div class="item <?= $categories[0]->slug; ?>">
-			<a href="<?= $video ?>" data-discussion="<?= $discussion ?>" data-slug="<?= $post->post_name; ?>">
-				<figure>
-					<?php the_post_thumbnail() ?>
+    <div class="item <?= $categories[0]->slug; ?>">
+      <a href="<?= $video ?>" data-discussion="<?= $discussion ?>" data-slug="<?= $post->post_name; ?>">
+        <figure>
+          <?php the_post_thumbnail() ?>
 
-					<figcaption>
+          <figcaption>
 
-						<img src="<?= get_stylesheet_directory_uri() ?>/images/play.png">
+            <img src="<?= get_stylesheet_directory_uri() ?>/images/play.png">
 
-						<div class="rating">
-							<?php get_average() ?>
-						</div>
+            <div class="rating">
+              <?php get_average() ?>
+            </div>
 
-					</figcaption>
+          </figcaption>
 
-				</figure>
-				<span><?php the_title() ?></span>
-			</a>
-		</div>
+        </figure>
+        <span><?php the_title() ?></span>
+      </a>
+    </div>
 
-		<?php endwhile; wp_reset_query(); ?>
+    <?php endwhile; wp_reset_query(); ?>
 
-	</div>
+  </div>
 </section>
 
 <section id="movie">
 
-	<span class="toggle-nav on">
-		<b></b>
-		<b></b>
-		<b></b>
-	</span>
+  <span class="toggle-nav on">
+    <b></b>
+    <b></b>
+    <b></b>
+  </span>
 
-	<div class="inner">
-		<h1>No Shampoo</h1>
+  <div class="inner">
+    <h1>No Shampoo</h1>
 
-		<div class="rating">
-			<i></i>
-			<i></i>
-			<i></i>
-			<i></i>
-			<i></i>
-		</div>
+    <div class="rating">
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+    </div>
 
-		<div class="direction">
+    <div class="direction">
 
-			<a href="#" class="prev">
-				<?php include( 'images/arrow-left.svg' ) ?>
-			</a>
+      <a href="#" class="prev">
+        <?php include( 'images/arrow-left.svg' ) ?>
+      </a>
 
-			<a href="#" class="next">
-				<?php include( 'images/arrow-right.svg' ) ?>
-			</a>
+      <a href="#" class="next">
+        <?php include( 'images/arrow-right.svg' ) ?>
+      </a>
 
-		</div>
+    </div>
 
-		<iframe width="854" height="480" src="https://www.youtube.com/embed/oDAw7vW7H0c" frameborder="0" allowfullscreen>
-		</iframe>
+    <iframe width="854" height="480" src="https://www.youtube.com/embed/oDAw7vW7H0c" frameborder="0" allowfullscreen>
+    </iframe>
 
-		<a href="#" target="_blank" class="discuss">discuss this video</a>
+    <a href="#" target="_blank" class="discuss">discuss this video</a>
 
-	</div>
+  </div>
 
 </section>
 
