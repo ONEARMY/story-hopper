@@ -112,7 +112,7 @@
   </span>
 
   <div class="inner">
-    <h1>No Shampoo</h1>
+    <h1>Story Hopper</h1>
 
     <div class="rating">
       <i></i>
@@ -134,7 +134,7 @@
 
     </div>
 
-    <iframe width="854" height="480" src="https://www.youtube.com/embed/oDAw7vW7H0c" frameborder="0" allowfullscreen>
+    <iframe width="854" height="480" src="https://www.youtube.com/watch?v=KJHhIV15CQ8" frameborder="0" allowfullscreen>
     </iframe>
 
     <a href="#" target="_blank" class="discuss">discuss this video</a>

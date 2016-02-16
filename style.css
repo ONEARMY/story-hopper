@@ -384,6 +384,11 @@ video::-webkit-media-controls {
   background-size: 245px auto;
 }
 
+#menu li:nth-child(4) a {
+  background-image: url( images/news.svg );
+  background-size: 245px auto;
+}
+
 #details {
   background: #F4D1D1;
   text-align: center;
@@ -433,6 +438,24 @@ video::-webkit-media-controls {
   padding: 0 20px;
   background-origin: content-box;
 }
+
+#newsbig {
+  background: #C1C1C1;
+  text-align: center;
+  padding: 100px 0 70px 0;
+}
+
+#newsbig h1 {
+  display: inline-block;
+  text-indent: -99999px;
+  width: 270px;
+  height: 55px;
+  background: url( images/news.svg ) no-repeat center center;
+  background-size: 100% auto;
+  padding: 0 20px;
+  background-origin: content-box;
+}
+
 
 #apply {
   padding: 90px 20px;
@@ -596,6 +619,92 @@ video::-webkit-media-controls {
 #movie .direction {
   display: none;
 }
+
+
+
+.news img {
+    width: 100%;
+    height: auto;
+}
+
+.news  {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.hungryfeed_items {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+.hungryfeeed {
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    height: auto;
+    padding: 10px;
+    background-color: white;
+    margin-bottom: 40px;
+}
+
+.hungryfeed_readmore{
+    font-size:13px;
+    padding-top:10px;
+}
+
+.hungryfeed_item {
+    display: inline-block;
+}
+
+.hungryfeed_item {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.hungryfeed_item a {
+    color: #6A90C1;
+    text-decoration: none;
+}
+
+div.hungryfeed_item_title {
+    font-weight: bold;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+div.hungryfeed_item_description img {
+    align: center;
+    height: 400px;
+    max-height: 400px;
+}
+
+div.hungryfeed_item_author {
+    display: none;
+}
+
+div.hungryfeed_item_date {
+    font-size: 12px;
+    color: black;
+    padding: 10px;
+}
+
+.hungryfeed_item h2 {
+    display: none;
+}
+
+
+
+.hungryfeed_item_description img {
+  width:100%
+  height:auto;
+}
+
+
+
 
 @media (min-width: 768px) {
 
@@ -803,7 +912,14 @@ video::-webkit-media-controls {
     cursor: pointer;
   }
 
+  .news  {
+      width: 600px
+  }
 }
+
+
+
+
 
 @media (min-width: 992px) {
 
@@ -888,6 +1004,20 @@ video::-webkit-media-controls {
   }
 
   #details a[download] {
+    font-size: 24px;
+    line-height: 41px;
+  }
+
+  #newsbig {
+    padding-bottom: 320px;
+  }
+
+  #newsbig .inner {
+    width: 910px;
+    margin: 0 auto;
+  }
+
+  #newsbig a[download] {
     font-size: 24px;
     line-height: 41px;
   }
