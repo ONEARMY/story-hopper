@@ -30,73 +30,33 @@ layout: default
     <h1>the stories</h1>
 
     <nav>
-      <?php
-
-      $args = [
-        'hide_empty' => 0
-      ];
-
-      $categories = get_terms( 'movie_category', $args );
-      $count = 0;
-
-      foreach( $categories as $category ) {
-
-        if( $count == 0 ) {
-          echo '<a href="#' . $category->slug . '" class="active">';
-        } else {
-          echo '<a href="#' . $category->slug . '">';
-        }
-
-        echo strtolower( $category->name ) . '</a>';
-        $count++;
-
-      }
-
-      ?>
+      <a href="#original" class="active">originals</a>
+      <a href="#submission">submissions</a>
     </nav>
-
   </div>
 
   <div class="inner">
+    {% for post in site.posts %}
 
-    <?php
+      <div class="item lol">
+        <a href="{{post.video}}" data-discussion="{{post.discussion}}" data-slug="{{post.slug}}">
+          <figure>
+            <img src="{{post.preview}}">
 
-    $args = [
-      'post_type' => 'movie',
-      'order'    => 'DESC'
-    ];
+            <figcaption>
+              <img src="/assets/images/play.png">
 
-    query_posts( $args );
-    while ( have_posts() ) : the_post();
+              <div class="rating">
+                test
+              </div>
+            </figcaption>
 
-    $categories = get_the_terms( get_the_ID(), 'movie_category' );
-    $video = get_field( 'url' );
-    $discussion = get_field( 'discussion' ) == 0 ? 'same' : get_field( 'discussion_url' );
+          </figure>
+          <span>{{post.title}}</span>
+        </a>
+      </div>
 
-    ?>
-
-    <div class="item <?= $categories[0]->slug; ?>">
-      <a href="<?= $video ?>" data-discussion="<?= $discussion ?>" data-slug="<?= $post->post_name; ?>">
-        <figure>
-          <?php the_post_thumbnail() ?>
-
-          <figcaption>
-
-            <img src="<?= get_stylesheet_directory_uri() ?>/images/play.png">
-
-            <div class="rating">
-              <?php get_average() ?>
-            </div>
-
-          </figcaption>
-
-        </figure>
-        <span><?php the_title() ?></span>
-      </a>
-    </div>
-
-    <?php endwhile; wp_reset_query(); ?>
-
+    {% endfor %}
   </div>
 </section>
 
