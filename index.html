@@ -38,7 +38,23 @@ layout: default
   <div class="inner">
     {% for post in site.posts %}
 
-      test
+      <div class="item {{post.categories}}">
+        <a href="{{post.link}}" data-discussion="{{post.discussion}}" data-slug="{{post.slug}}">
+          <figure>
+            <img width="264" height="373" src="/assets/images/stories/{{post.preview}}">
+
+            <figcaption>
+              <img src="/assets/images/play.png">
+
+              <div class="rating">
+                test
+              </div>
+            </figcaption>
+
+          </figure>
+          <span>{{post.title}}</span>
+        </a>
+      </div>
 
     {% endfor %}
   </div>
