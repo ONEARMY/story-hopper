@@ -9,7 +9,7 @@ sass:
   style: compressed
 
 # Misc
-exclude: ['CNAME', '*.md']
+exclude: ['CNAME', 'LICENSE.md', 'README.md']
 permalink: pretty
 
 # Gems
