@@ -1,5 +1,4 @@
 ---
-layout: post
 title: No Shampoo
 date: 2015-10-12 17:59
 categories: originals

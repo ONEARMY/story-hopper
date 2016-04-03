@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Story hopper - أول فيديو
 date: 2015-11-22 12:41
 categories: submissions

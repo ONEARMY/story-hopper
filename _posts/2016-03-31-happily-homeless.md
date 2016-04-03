@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Happily homeless
 date: 2016-03-31 16:05
 categories: originals

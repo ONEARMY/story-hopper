@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Small change, big difference
 date: 2015-10-06 18:04
 categories: originals

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Realistic Lunch
 date: 2015-11-11 15:26
 categories: originals

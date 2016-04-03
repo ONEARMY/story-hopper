@@ -1,5 +1,4 @@
 ---
-layout: post
 title: A free trip
 date: 2015-10-05 18:06
 categories: originals

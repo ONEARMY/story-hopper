@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Getting organised
 date: 2015-10-08 14:07
 categories: originals

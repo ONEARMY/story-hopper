@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 31 days without chewing
 date: 2015-10-11 18:07
 categories: originals

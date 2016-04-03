@@ -1,5 +1,4 @@
 ---
-layout: post
 title: The fantasy of a thief
 date: 2015-10-10 18:07
 categories: originals

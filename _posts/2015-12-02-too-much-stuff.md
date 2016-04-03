@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Too much stuff
 date: 2015-12-02 23:33
 categories: originals
