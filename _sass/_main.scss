@@ -137,12 +137,12 @@ video::-webkit-media-controls {
 
 #intro h1 {
   height: 62px;
-  background-image: url( images/intro-title.svg );
+  background-image: url( ../images/intro-title.svg );
 }
 
 #intro h2 {
   height: 55px;
-  background-image: url( images/intro-subtitle.svg );
+  background-image: url( ../images/intro-subtitle.svg );
 }
 
 #intro hgroup {
@@ -171,7 +171,7 @@ video::-webkit-media-controls {
 
 #movies h1 {
   display: block;
-  background: url( images/the-stories.svg ) no-repeat center center;
+  background: url( ../images/the-stories.svg ) no-repeat center center;
   background-size: 210px;
   height: 180px;
   text-indent: -99999px;
@@ -248,7 +248,7 @@ video::-webkit-media-controls {
 }
 
 #info .by {
-  background: url( images/project-by.svg ) no-repeat center center;
+  background: url( ../images/project-by.svg ) no-repeat center center;
   background-size: 100%;
   text-indent: -99999px;
   display: inline-block;
@@ -282,19 +282,19 @@ video::-webkit-media-controls {
 }
 
 #info ul a[href*="facebook"] {
-  background-image: url( images/facebook.svg );
+  background-image: url( ../images/facebook.svg );
 }
 
 #info ul a[href*="twitter"] {
-  background-image: url( images/twitter.svg );
+  background-image: url( ../images/twitter.svg );
 }
 
 #info ul a[href*="youtube"] {
-  background-image: url( images/youtube.svg );
+  background-image: url( ../images/youtube.svg );
 }
 
 #info ul a[href*="mail"] {
-  background-image: url( images/newsletter.svg );
+  background-image: url( ../images/newsletter.svg );
 }
 
 #info p {
@@ -359,22 +359,22 @@ video::-webkit-media-controls {
 }
 
 #menu li:nth-child(1) a {
-  background-image: url( images/watch-stories.svg );
+  background-image: url( ../images/watch-stories.svg );
   background-size: 205px auto;
 }
 
 #menu li:nth-child(2) a {
-  background-image: url( images/about-project.svg );
+  background-image: url( ../images/about-project.svg );
   background-size: 212px auto;
 }
 
 #menu li:nth-child(3) a {
-  background-image: url( images/share-your-story.svg );
+  background-image: url( ../images/share-your-story.svg );
   background-size: 245px auto;
 }
 
 #menu li:nth-child(4) a {
-  background-image: url( images/news.svg );
+  background-image: url( ../images/news.svg );
   background-size: 245px auto;
 }
 
@@ -422,7 +422,7 @@ video::-webkit-media-controls {
   text-indent: -99999px;
   width: 270px;
   height: 55px;
-  background: url( images/share-your-story.svg ) no-repeat center center;
+  background: url( ../images/share-your-story.svg ) no-repeat center center;
   background-size: 100% auto;
   padding: 0 20px;
   background-origin: content-box;
@@ -439,7 +439,7 @@ video::-webkit-media-controls {
   text-indent: -99999px;
   width: 270px;
   height: 55px;
-  background: url( images/news.svg ) no-repeat center center;
+  background: url( ../images/news.svg ) no-repeat center center;
   background-size: 100% auto;
   padding: 0 20px;
   background-origin: content-box;
@@ -467,7 +467,7 @@ video::-webkit-media-controls {
 }
 
 #apply select {
-  background: url( images/select.svg ) no-repeat right 15px center;
+  background: url( ../images/select.svg ) no-repeat right 15px center;
 }
 
 #apply h1 {
@@ -540,7 +540,7 @@ video::-webkit-media-controls {
 
 #about h1 {
   display: inline-block;
-  background: url( images/about-project.svg ) no-repeat center center;
+  background: url( ../images/about-project.svg ) no-repeat center center;
   text-indent: -9999px;
   width: 215px;
   height: 55px;
@@ -584,21 +584,21 @@ video::-webkit-media-controls {
   height: 30px;
   width: 30px;
   display: inline-block;
-  background: url(images/stars/empty.svg) no-repeat center center;
+  background: url(../images/stars/empty.svg) no-repeat center center;
   background-size: 100% auto;
 }
 
 #movie .rating .full {
-  background-image: url(images/stars/full.svg);
+  background-image: url(../images/stars/full.svg);
 }
 
 #movie .rating .half {
-  background-image: url(images/stars/half.svg);
+  background-image: url(../images/stars/half.svg);
 }
 
 #movie .discuss {
   color: #000;
-  background: url(images/discuss.png) no-repeat center top;
+  background: url(../images/discuss.png) no-repeat center top;
   display: block;
   padding-top: 48px;
   margin-top: 13%;
@@ -609,91 +609,84 @@ video::-webkit-media-controls {
   display: none;
 }
 
-
-
 .news img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .news  {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    margin-top: 100px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 100px;
 }
 
 .hungryfeed_items {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
 
 .hungryfeeed {
-    width: 100%;
-    display: inline-block;
-    overflow: hidden;
-    height: auto;
-    padding: 10px;
-    background-color: white;
-    margin-bottom: 40px;
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
+  height: auto;
+  padding: 10px;
+  background-color: white;
+  margin-bottom: 40px;
 }
 
 .hungryfeed_readmore{
-    font-size:13px;
-    padding-top:10px;
+  font-size: 13px;
+  padding-top: 10px;
 }
 
 .hungryfeed_item {
-    display: inline-block;
+  display: inline-block;
 }
 
 .hungryfeed_item {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .hungryfeed_item a {
-    color: #6A90C1;
-    text-decoration: none;
+  color: #6A90C1;
+  text-decoration: none;
 }
 
 div.hungryfeed_item_title {
-    font-weight: bold;
-    display: inline-block;
-    text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  text-transform: uppercase;
 }
 
 div.hungryfeed_item_description img {
-    align: center;
-    height: 400px;
-    max-height: 400px;
+  align: center;
+  height: 400px;
+  max-height: 400px;
 }
 
 div.hungryfeed_item_author {
-    display: none;
+  display: none;
 }
 
 div.hungryfeed_item_date {
-    font-size: 12px;
-    color: black;
-    padding: 10px;
+  font-size: 12px;
+  color: black;
+  padding: 10px;
 }
 
 .hungryfeed_item h2 {
-    display: none;
+  display: none;
 }
-
-
 
 .hungryfeed_item_description img {
-  width:100%
-  height:auto;
+  width: 100%;
+  height: auto;
 }
-
-
-
 
 @media (min-width: 768px) {
 
@@ -959,15 +952,15 @@ div.hungryfeed_item_date {
     width: 25px;
     height: 25px;
     display: inline-block;
-    background: url( images/stars/empty.png ) no-repeat center center;
+    background: url( ../images/stars/empty.png ) no-repeat center center;
   }
 
   #movies i.full {
-    background-image: url( images/stars/full.png );
+    background-image: url( ../images/stars/full.png );
   }
 
   #movies i.half {
-    background-image: url( images/stars/half.png );
+    background-image: url( ../images/stars/half.png );
   }
 
   #menu h1 {
