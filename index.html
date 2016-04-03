@@ -36,12 +36,12 @@ layout: default
   </div>
 
   <div class="inner">
-    {% for post in site.posts %}
+    {% for video in site.posts %}
 
-      <div class="item {{post.categories}}">
-        <a href="{{post.link}}" data-discussion="{{post.discussion}}" data-slug="{{post.slug}}">
+      <div class="item {{video.categories}}">
+        <a href="{{video.link}}" data-discussion="{{video.discussion}}" data-slug="{{video.slug}}">
           <figure>
-            <img width="264" height="373" src="/assets/images/stories/{{post.preview}}">
+            <img width="264" height="373" src="/assets/images/stories/{{video.preview}}">
 
             <figcaption>
               <img src="/assets/images/play.png">
@@ -52,7 +52,7 @@ layout: default
             </figcaption>
 
           </figure>
-          <span>{{post.title}}</span>
+          <span>{{video.title}}</span>
         </a>
       </div>
 
