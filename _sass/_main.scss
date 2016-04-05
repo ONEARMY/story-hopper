@@ -293,6 +293,10 @@ video::-webkit-media-controls {
   background-image: url( ../images/youtube.svg );
 }
 
+#info ul a[href*="github"] {
+  background-image: url( ../images/github.svg );
+}
+
 #info ul a[href*="mail"] {
   background-image: url( ../images/newsletter.svg );
 }
