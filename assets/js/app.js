@@ -1,60 +1,3 @@
-var setRating = function() {
-
-  var index = $( this ).index(),
-    slug = document.URL.split( '/' )[4],
-    date = new Date();
-
-  $( this ).closest( '.rating' ).find( 'i' ).each( function() {
-
-    if( $( this ).index() <= index ) {
-      $( this ).addClass( 'full' );
-    } else {
-      $( this ).removeClass( 'full' );
-    }
-
-  });
-
-  var data = {
-    count: index + 1,
-    synced: false
-  };
-
-  date.setDate( date.getDate() + 1200 );
-  document.cookie = slug + '=' + encodeURIComponent( JSON.stringify( data ) ) + '; ' + 'path=/; expires=' + date.toUTCString() + ';';
-
-}
-
-var getRating = function( slug ) {
-
-  var cookies = document.cookie,
-    singles = cookies.split( '; ' ),
-    html = '',
-    data = 0;
-
-  for( cookie in singles ) {
-
-    var mixed = singles[cookie].split( '=' );
-
-    if( mixed[1].slice( -1 ) == '0' ) {
-      continue;
-    }
-
-    if( mixed[0] == slug ) {
-      data = JSON.parse( decodeURIComponent( mixed[1] ) ).count;
-      break;
-    }
-
-  }
-
-  for( i = 1; i < 6; i++ ) {
-    var attr = i <= data ? 'full' : '';
-    html += '<i class="' + attr + '"></i>';
-  }
-
-  return html;
-
-}
-
 var calibrateDir = function( id, movie ) {
 
   var current = $( '#movies a[href*="' + id + '"]' ).closest( '.item' ),
@@ -85,12 +28,9 @@ var switchMovie = function( id, event ) {
   movie.find( 'iframe' ).attr( 'src', href );
   movie.find( 'h1' ).html( title );
 
-  movie.find( '.rating' ).html( getRating.bind( this, slug ) );
   movie.find( '.direction' ).each( calibrateDir.bind( this, id, movie ) );
 
-  movie.fadeIn( 300, function() {
-    movie.find( '.rating i' ).click( setRating );
-  });
+  movie.fadeIn(300);
 
   var url = '/movie/' + slug;
 
@@ -133,8 +73,6 @@ $( document ).ready( function() {
     });
 
   }
-
-  $( '#movie.single .rating i' ).click( setRating );
 
   $( '#movie:not(.single) .direction a' ).on( 'click', function( event ) {
 

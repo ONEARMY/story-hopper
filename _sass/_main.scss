@@ -574,26 +574,7 @@ video::-webkit-media-controls {
   font-size: 48px;
   display: block;
   margin-top: 22%;
-}
-
-#movie .rating {
-  margin: 15px 0 55px;
-}
-
-#movie .rating i {
-  height: 30px;
-  width: 30px;
-  display: inline-block;
-  background: url(../images/stars/empty.svg) no-repeat center center;
-  background-size: 100% auto;
-}
-
-#movie .rating .full {
-  background-image: url(../images/stars/full.svg);
-}
-
-#movie .rating .half {
-  background-image: url(../images/stars/half.svg);
+  margin-bottom: 60px;
 }
 
 #movie .discuss {
@@ -886,22 +867,11 @@ div.hungryfeed_item_date {
     margin-right: auto;
   }
 
-  #movie .rating {
-    margin-bottom: 70px;
-  }
-
-  #movie .rating i {
-    cursor: pointer;
-  }
-
   .news  {
-      width: 600px
+    width: 600px;
   }
+
 }
-
-
-
-
 
 @media (min-width: 992px) {
 
@@ -940,27 +910,6 @@ div.hungryfeed_item_date {
 
   #movies figcaption img {
     margin-top: 45%;
-  }
-
-  #movies .rating {
-    position: absolute;
-    width: 100%;
-    bottom: 35px;
-  }
-
-  #movies .rating i {
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    background: url( ../images/stars/empty.png ) no-repeat center center;
-  }
-
-  #movies i.full {
-    background-image: url( ../images/stars/full.png );
-  }
-
-  #movies i.half {
-    background-image: url( ../images/stars/half.png );
   }
 
   #menu h1 {
