@@ -2,17 +2,22 @@
   <h1>Menu</h1>
 
   <ul>
-    <li class="current-menu-item">
-      <a href="/#movies">Watch the stories</a>
-    </li>
-    <li>
-      <a href="/about-the-project">About the project</a>
-    </li>
-    <li>
-      <a href="/share-your-story">Share your story</a>
-    </li>
-    <li>
-      <a href="/news">News</a>
-    </li>
+    {% assign sorted = (site.pages | sort: "index") %}
+
+    {% for node in sorted %}
+
+      {% assign current = nil %}
+
+      {% if page.url == node.url %}
+        {% assign current = "current-menu-item" %}
+      {% endif %}
+
+      {% unless node.url contains "assets" %}
+        <li class="{{current}}">
+          <a href="{{node.url}}">{{node.title}}</a>
+        </li>
+      {% endunless %}
+
+    {% endfor %}
   </ul>
 </nav>
