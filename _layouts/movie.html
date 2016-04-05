@@ -21,13 +21,18 @@ layout: default
     </div>
 
     <div class="direction">
-      <a href="<?= post_direction( 'prev' ) ?>" class="prev">
-        {% include svg/arrow-left.svg %}
-      </a>
 
-      <a href="<?= post_direction( 'next' ) ?>" class="next">
-        {% include svg/arrow-right.svg %}
-      </a>
+      {% if page.previous.url %}
+        <a href="{{page.previous.url}}" class="prev">
+          {% include svg/arrow-left.svg %}
+        </a>
+      {% endif %}
+
+      {% if page.next.url %}
+        <a href="{{page.next.url}}" class="next">
+          {% include svg/arrow-right.svg %}
+        </a>
+      {% endif %}
     </div>
 
     <iframe width="854" height="480" src="//www.youtube.com/embed/{{page.youtube}}" frameborder="0" allowfullscreen></iframe>
