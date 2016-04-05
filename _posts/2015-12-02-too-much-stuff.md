@@ -5,4 +5,5 @@ categories: original
 link: https://www.youtube.com/watch?v=Jhy6OZzuRJE
 discussion: https://davehakkens.nl/community/forums/topic/to-much-stuff/
 preview: too-much-stuff.jpg
+layout: movie
 ---

@@ -5,4 +5,5 @@ categories: original
 link: https://www.youtube.com/watch?v=1rhGoAzDDaE
 discussion: https://davehakkens.nl/community/forums/topic/a-free-trip/
 preview: a-free-trip.jpg
+layout: movie
 ---

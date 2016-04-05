@@ -5,4 +5,5 @@ categories: original
 link: https://www.youtube.com/watch?v=aFIKXXj2HIs
 discussion: https://davehakkens.nl/community/forums/topic/realistic-lunch/
 preview: realistic-lunch.jpg
+layout: movie
 ---

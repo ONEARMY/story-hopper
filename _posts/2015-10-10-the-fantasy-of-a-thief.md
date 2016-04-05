@@ -5,4 +5,5 @@ categories: original
 link: https://www.youtube.com/watch?v=LF2zI09rL8c
 discussion: https://davehakkens.nl/community/forums/topic/fantasy-of-a-thief/
 preview: fantasy-of-a-thief.jpg
+layout: movie
 ---

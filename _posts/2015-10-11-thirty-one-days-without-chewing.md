@@ -5,4 +5,5 @@ categories: original
 link: https://www.youtube.com/watch?v=KagMKu8Q8ww
 discussion: https://davehakkens.nl/community/forums/topic/31-days-without-chewing/
 preview: without-chewing.jpg
+layout: movie
 ---

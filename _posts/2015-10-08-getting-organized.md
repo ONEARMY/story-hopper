@@ -5,4 +5,5 @@ categories: original
 link: https://www.youtube.com/watch?v=DqO7L5z_XXo
 discussion: https://davehakkens.nl/community/forums/topic/getting-organized/
 preview: getting-organized.jpg
+layout: movie
 ---
