@@ -49,6 +49,44 @@ var switchMovie = function( id, event ) {
 
 $( document ).ready( function() {
 
+  if ($('#newsbig')) {
+    $.ajax({
+      type: 'GET',
+      url: 'http://davehakkens.nl/tag/storyhopper/feed/',
+      success: function (xml) {
+        $(xml).find('item').each(function (index) {
+          var article = $('<article />')
+
+          var title = $(this).find('title').text()
+          var description = $($(this).find('description').text())[1]
+          var url = $(this).find('link').text()
+
+          var preview = $($(this).find('description').text()).find('.wp-post-image')
+          var figure = $('<figure></figure>')
+
+          figure.append(preview)
+          article.append(figure)
+          article.append('<a href="' + url +  '" class="title" target="_blank">' + title + '</a>')
+
+          var descText = $(description).text()
+
+          if (descText.indexOf('-source') == -1 && descText.indexOf(title) == -1) {
+            article.append('<p>' + descText + '</p>')
+          }
+
+          var news = $('#newsbig .news')
+
+          news.find('.loading').hide()
+          news.append(article)
+
+          if (index == 9) {
+            return false
+          }
+        })
+      }
+    })
+  }
+
   $( '#menu li:first-child a' ).each( function() {
 
     var old = $( this ).attr( 'href' );
