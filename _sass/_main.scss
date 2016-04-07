@@ -756,9 +756,13 @@ video::-webkit-media-controls {
   }
 
   #apply .inner {
-    width: 460px;
+    width: 800px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  #apply .inner iframe {
+    margin-top: 70px;
   }
 
   #apply h1 {
