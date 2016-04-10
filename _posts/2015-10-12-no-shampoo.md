@@ -1,5 +1,5 @@
 ---
-title: No Shampoo
+title: No shampoo
 date: 2015-10-12 17:59
 categories: original
 youtube: EmiqG_XdePY
