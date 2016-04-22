@@ -379,7 +379,7 @@ video::-webkit-media-controls {
 
 #menu li:nth-child(4) a {
   background-image: url( ../images/news.svg );
-  background-size: 245px auto;
+  background-size: 235px auto;
 }
 
 #details {
@@ -664,6 +664,10 @@ video::-webkit-media-controls {
 
   #menu li:nth-child(3) a {
     background-size: 458px auto;
+  }
+
+  #menu li:nth-child(4) a {
+    background-size: 385px auto;
   }
 
   #movies h1 {
