@@ -188,17 +188,17 @@ video::-webkit-media-controls {
 }
 
 #movies nav a {
-  background: #D8D8D8;
+  background: #F4D1D1;
   color: #000;
   border-radius: 6px;
   font-size: 14px;
-  padding: 6px 20px;
+  padding: 8px 12px;
   display: block;
 }
 
 #movies nav a:hover,
 #movies nav a.active {
-  background: #B1B1B1;
+  background: #D6B3B3;
 }
 
 #movies nav a:first-child {
@@ -233,7 +233,7 @@ video::-webkit-media-controls {
 #movies span {
   font-size: 18px;
   padding-top: 15px;
-  color: #000;
+  color: #616161;
   display: block;
   font-weight: 100;
 }
@@ -680,8 +680,7 @@ video::-webkit-media-controls {
 
   #movies nav a {
     margin: 0 10px;
-    font-size: 18px;
-    padding: 7px 25px;
+    font-size: 16px;
   }
 
   #movies nav a:first-child {
