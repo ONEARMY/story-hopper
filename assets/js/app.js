@@ -52,7 +52,7 @@ $( document ).ready( function() {
   if ($('#newsbig')) {
     $.ajax({
       type: 'GET',
-      url: 'http://davehakkens.nl/tag/storyhopper/feed/',
+      url: 'https://davehakkens.nl/tag/storyhopper/feed/',
       success: function (xml) {
         $(xml).find('item').each(function (index) {
           var article = $('<article />')
