@@ -1,5 +1,5 @@
 ---
-title: Learn from a local
+title: Learn from locals
 date: 2016-06-02 10:00
 categories: original
 youtube: 4yLcywTtiiE
