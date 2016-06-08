@@ -1,5 +1,5 @@
 ---
-title: Learn from locals
+title: Smoked out Kathmandu
 date: 2016-06-08 10:00
 categories: original
 youtube: 4NRXNDFP7RtE
