@@ -42,7 +42,7 @@ index: 1
   <div class="inner">
     {% for video in site.posts %}
 
-      <div class="item {{video.categories}}">
+      <div class="item {{video.categories | join: " "}}">
         <a href="https://www.youtube.com/watch?v={{video.youtube}}" data-discussion="{{video.discussion}}" data-slug="{{video.slug}}">
           <figure>
             <img width="264" height="373" src="/assets/images/stories/{{video.preview}}">
