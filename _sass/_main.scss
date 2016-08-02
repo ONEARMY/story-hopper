@@ -179,7 +179,7 @@ video::-webkit-media-controls {
 
 #movies nav {
   display: flex;
-  display: -webkit-flex;
+  display: inline-block;
   flex-direction: column;
   -webkit-flex-direction: column;
   align-items: center;
@@ -188,12 +188,11 @@ video::-webkit-media-controls {
 }
 
 #movies nav a {
-  background: #F4D1D1;
   color: #000;
   border-radius: 6px;
   font-size: 14px;
   padding: 8px 12px;
-  display: block;
+  display: inline-block;
 }
 
 #movies nav a:hover,
