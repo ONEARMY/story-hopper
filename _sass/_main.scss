@@ -188,16 +188,16 @@ video::-webkit-media-controls {
 }
 
 #movies nav a {
-  color: #000;
+  color: #000000;
   border-radius: 6px;
-  font-size: 14px;
-  padding: 8px 12px;
+  padding: 6px 13px 9px 9px;
   display: inline-block;
 }
 
 #movies nav a:hover,
 #movies nav a.active {
-  background: #D6B3B3;
+  background: #2d2d2d;
+  color: #FFF;
 }
 
 #movies nav a:first-child {
