@@ -5,7 +5,7 @@ categories:
   - original
   - travel
 youtube: f1C65aybeQ8
-discussion: https://davehakkens.nl/community
+discussion: https://davehakkens.nl/community/forums/forum/story-hopper/discuss/
 preview: mountains-of-money.jpg
 layout: movie
 Name: Dave Hakkens
