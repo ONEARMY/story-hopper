@@ -7,5 +7,5 @@ youtube: ulW1eYjQW0I
 discussion: https://davehakkens.nl/community/forums/forum/story-hopper/discuss/
 preview: technology-humanise.jpg
 layout: movie
-Name: Dave Hakkens
+Name: Bas van Raay
 ---
