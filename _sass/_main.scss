@@ -889,7 +889,12 @@ a.by img {
 
 @media (min-width: 992px) {
 
-  #overlay .close {
+
+#overlay {
+  margin-top: -20px;
+}
+
+#overlay .close {
 background-size: 70px;
 height: 70px;
 width: 70px;
