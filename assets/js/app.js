@@ -192,7 +192,7 @@ $( document ).ready( function() {
 });
 
 
-$('#info .').click(function(event) {
+$('#info .by').click(function(event) {
   $('#overlay').addClass('open')
   event.preventDefault()
 })
