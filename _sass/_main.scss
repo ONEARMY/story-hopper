@@ -246,16 +246,6 @@ video::-webkit-media-controls {
   padding-bottom: 90px;
 }
 
-#info .by {
-  background: url( ../images/project-by.svg ) no-repeat center center;
-  background-size: 100%;
-  text-indent: -99999px;
-  display: inline-block;
-  width: 225px;
-  margin-bottom: 18px;
-  height: 25px;
-}
-
 #info ul {
   list-style: none;
   padding: 0;
@@ -620,6 +610,72 @@ video::-webkit-media-controls {
   height: auto;
   margin: 0 auto;
   margin-top: 100px;
+}
+
+
+#overlay {
+  position: fixed;
+  overflow: scroll;
+  justify-content: center;
+  align-items: center;
+  background: #313131;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+
+#overlay.open {
+  display: block;
+}
+
+#overlay nav {
+  margin: 10px auto;
+}
+
+#overlay .close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  text-indent: -99999px;
+  background: url(/assets/images/close.gif);
+  background-size: 35px;
+  height: 35px;
+  width: 35px;
+  background-repeat: no-repeat;
+}
+
+#overlay .otherby {
+  margin: 50px auto 0;
+  width: 240px;
+  max-width: 70vw;
+}
+
+#overlay .external img {
+  width: 200px;
+  max-width: 70vw;
+  height: auto;
+  margin: 10px;
+}
+
+#overlay a:hover {
+  border: 0;
+}
+
+.otherby img {
+  max-width: 100%;
+}
+
+#overlay .overlay-social img {
+  width: 50px;
+  height: auto;
+}
+
+a.by img {
+  width: 300px;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 768px) {

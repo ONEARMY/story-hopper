@@ -186,4 +186,20 @@ $( document ).ready( function() {
 
   $( '#about, #movie' ).fitVids();
 
+  $( '.overlay .close' ).click( function( e ) {
+  $( this ).closest( '.overlay' ).fadeOut( 300 );
+  e.preventDefault();
+});
+
+
+$('#info .by').click(function(event) {
+  $('#overlay').addClass('open')
+  event.preventDefault()
+})
+
+$('#overlay .close').click(function(event) {
+  $(this).closest('#overlay').removeClass('open')
+  event.preventDefault()
+})
+
 });
