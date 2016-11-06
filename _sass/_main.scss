@@ -249,6 +249,7 @@ video::-webkit-media-controls {
 #info ul {
   list-style: none;
   padding: 0;
+  display: none;
 }
 
 #info li {
@@ -297,7 +298,7 @@ video::-webkit-media-controls {
   color: #767676;
   font-size: 18px;
   line-height: 24px;
-  margin: 0 0 100px;
+  margin: 0 0 70px;
 }
 
 #info p a {
@@ -674,7 +675,7 @@ video::-webkit-media-controls {
 }
 
 a.by img {
-  width: 300px;
+  width: 400px;
   margin-bottom: 10px;
 }
 
