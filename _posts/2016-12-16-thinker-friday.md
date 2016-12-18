@@ -1,5 +1,5 @@
 ---
-title: Thinker Friday
+title: Tinker Friday
 date: 2016-12-16 10:00
 categories:
   - submission
