@@ -96,6 +96,29 @@ video::-webkit-media-controls {
   background: #B9D1E2;
 }
 
+.notification {
+    background: #00bfa5;
+    position: fixed;
+    bottom: 0px;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    z-index: 99999;
+    font-size: 14px;
+    font-weight: bold;
+}
+@media (min-width: 768px) {
+.notification {
+    padding: 20px 0px;
+}
+}
+
+.notification .text {
+    color: white;
+}
+
+
 #intro {
   height: 100%;
   position: relative;
