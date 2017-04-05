@@ -8,6 +8,7 @@ index: 1
   <video muted loop autoplay>
     <source src="/assets/intro.mp4" type="video/mp4">
   </video>
+  <div class="backgroundimage"> </div>
 
   <article>
     <span class="toggle-nav">
@@ -20,12 +21,24 @@ index: 1
       <h1>{{site.name}}</h1>
       <h2>{{site.description}}</h2>
     </hgroup>
-
     <footer>
-      <a href="#movies">watch videos</a>
+      <a href="#bigpicture">watch videos</a>
     </footer>
   </article>
 </section>
+
+<section id="bigpicture">
+<div class="fullwidth">
+  <center><img src="/assets/images/thebigpicture.png" height="auto" width="500" > </center>
+  <h2>A video series challenging global systems</h2>
+    <div class="bigthumbnail"> <img src="/assets/images/bigpicture_data.jpg"> <h1>Darkside of data </h1> <h2>Step one to prevent a global problem</h2></div>
+    <div class="bigthumbnail"> <img src="/assets/images/comingsoon.jpg"> <h1>No more cheap</h1>  <h2>A future economic that could benefit all </h2></div>
+    <div class="bigthumbnail"> <img src="/assets/images/comingsoon.jpg"> <h1>Western bubble </h1>  <h2>When the entire world is working for you</h2></div>
+    <div class="bigthumbnail"> <img src="/assets/images/comingsoon.jpg"> <h1>Realistic on profit </h1>  <h2>A different perspective to look at profits </h2></div>
+</div>
+
+</section>
+
 
 <section id="movies">
   <div class="inner">
@@ -33,10 +46,10 @@ index: 1
 
     <nav>
       <a href="#original" class="active">💫 originals</a>
-      <a href="#submission">📦 submits</a>
-      <a href="#diy">🔧 DIY</a>
-      <a href="#travel">🚌 travel</a>
-      <a href="#idea">💡 ideas </a>
+      <a href="#submission">📦　submits</a>
+      <a href="#diy">🔧　DIY</a>
+      <a href="#travel">🚌 　travel</a>
+      <a href="#idea">💡　ideas </a>
     </nav>
   </div>
 
@@ -50,6 +63,7 @@ index: 1
 
             <figcaption>
               <img src="/assets/images/play.png">
+                <h2>{{video.subtitle}}</h2>
             </figcaption>
           </figure>
           <span>{{video.title}}</span>
@@ -69,8 +83,10 @@ index: 1
 
   <div class="inner">
     <!-- DO NOT touch this! :) -->
-    <h1>Story Hopper</h1>
-
+    <div class="movie-titles">
+      <h1>story hopper</h1>
+      <h2>subtitle</h2>
+    </div>
     <div class="direction">
       <a href="#" class="prev">
         {% include svg/arrow-left.svg %}

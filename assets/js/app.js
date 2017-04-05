@@ -36,6 +36,7 @@ var switchMovie = function( id, event ) {
 
   $( 'body' ).data( 'old-title', document.title );
   document.title = title + ' | Story Hopper';
+  
 
   window.history.pushState( null, null, url );
 
