@@ -37,7 +37,13 @@ layout: default
         <div class="aboutmovie"><p>{{page.about}}</p></div>
         <div class="meta"><p>Made by {{page.maker}}</p>
         <p>{{ page.date | date: '%B, %Y' }}</p>
+        <p>{% if page.categories contains "original"%}
+        Category: ORGINAL
+        {% else %}
+        Category: SUBMISSION
+        {% endif %}</p>
         <a href="{{page.discussion}}" target="_blank" class="discuss">discuss this video</a></div>
+
      </div>
 </div>
 <div class="thumbnail"> <img src="/assets/images/stories/{{page.preview-large}}"></div>
