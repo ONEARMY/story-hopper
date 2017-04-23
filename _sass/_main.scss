@@ -6,6 +6,8 @@ body {
   font-family: 'Varela Round', sans-serif;
   margin: 0;
   -webkit-font-smoothing: antialiased;
+  background: url(/assets/images/dot_background.png) top left #f9f9f9;
+  background-size: 643px 339px;
 }
 
 a {
@@ -27,10 +29,6 @@ figure figcaption h2 {
 input:focus,
 select:focus {
   outline: none;
-}
-
-#movie .inner {
-    padding: 20px;
 }
 
 
@@ -103,7 +101,8 @@ video::-webkit-media-controls {
 }
 
 .blue {
-  background: #B9D1E2;
+  background: url(/assets/images/dot_background.png) top left #B9D1E2;;
+  background-size: 643px 339px;
 }
 
 #intro {
@@ -262,6 +261,10 @@ video::-webkit-media-controls {
   display: none;
 }
 
+footer#info {
+    margin-top: 50px;
+}
+
 #info {
   text-align: center;
   padding-bottom: 90px;
@@ -333,7 +336,8 @@ video::-webkit-media-controls {
   right: 0;
   bottom: 0;
   overflow: hidden;
-  background-color: #D8E7D5;
+  background: url(/assets/images/dot_background.png) top left #D8E7D5;
+  background-size: 643px 339px;
   text-align: center;
   display: none;
   z-index: 3000;
@@ -394,7 +398,8 @@ video::-webkit-media-controls {
 }
 
 #details {
-  background: #F4D1D1;
+  background: url(/assets/images/dot_background.png) top left #F4D1D1;
+  background-size: 643px 339px;
   text-align: center;
   padding: 100px 0 70px 0;
 }
@@ -574,7 +579,8 @@ video::-webkit-media-controls {
   top: 0;
   width: 100vw;
   height: 100%;
-  background: #F2DC9F;
+  background: url(/assets/images/dot_background.png) top left #F2DC9F;
+  background-size: 643px 339px;
   display: none;
   text-align: center;
   overflow: auto;
@@ -595,10 +601,10 @@ video::-webkit-media-controls {
 #movie .discuss {
   display: inline-block;
   color: white;
-  padding: 16px 20px;
   background-color: #2196F3;
   font-family: 'medium', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
+  padding: 12px 15px;
   margin-top:20px;
 }
 
@@ -609,7 +615,45 @@ video::-webkit-media-controls {
 
 
 #movie .direction {
-  display: none;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#movie .direction a {
+  cursor: pointer;
+  display: block;
+}
+
+#movie .direction a[href="#"] {
+  visibility: hidden;
+}
+
+#movie .direction svg {
+  width: 40px;
+  background-color: white;
+  height: 40px;
+  width: 100%;
+}
+
+#movie .direction img {
+  height: 30px;
+  padding: 20px;
+  padding-top: 30px;
+}
+
+#movie .direction:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+#movie .prev {
+  float: left;
+}
+
+#movie .next {
+  float: right;
 }
 
 #newsbig article {
@@ -716,13 +760,13 @@ a.by img {
   width: 100%;
   overflow:hidden;
   height: auto;
-  margin-bottom:50px;
 }
 
 .thumbnail {
    float:left;
    width:100%;
-   margin-bottom: 100px;
+   margin-bottom: 50px;
+   margin-top: 100px;
 }
 
 .thumbnail img {
@@ -732,13 +776,13 @@ a.by img {
 
 #movie .info{
   text-align:left;
-  padding: 60px;
-  padding-top: 20px;
+  padding: 20px;
+  padding-top: 0px;
 }
 
 #movie .aboutmovie {
   font-family: 'medium', sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 40px;
   overflow:hidden;
 }
@@ -756,11 +800,13 @@ a.by img {
 }
 
 .movie-titles h1 {
-  font-size: 72px;
+  font-size: 46px;
+  color: #313131;
 }
 
 .movie-titles h2 {
   color: #313131;
+  font-size: 20px;
 }
 
 .fullwidth {
@@ -814,6 +860,15 @@ a.by img {
     font-size: 20px;
 }
 
+.fullwidth h3 {
+    text-align: center;
+    color: #2196F3;
+    font-family: medium;
+    font-weight: 200;
+    text-decoration: underline;
+    font-size: 18px;
+}
+
 .backgroundimage {
   width: 100%;
   height: 100%;
@@ -851,11 +906,39 @@ a.by img {
   #movies .item {
     margin-bottom: 80px;
     height: auto;
-  }
+    }
+
+    #movie .info{
+      text-align:left;
+      padding: 60px;
+      padding-top: 20px;
+    }
+
+
+
 }
 
 @media (min-width: 768px) {
 
+
+  .movie-titles h1 {
+    font-size: 72px;
+  }
+
+  .movie-titles h2 {
+    font-size:24px;
+  }
+
+
+  #movie .discuss {
+    padding: 16px 20px;
+    margin-top:20px;
+  }
+
+
+  #movie .direction img {
+      height: 40px;
+  }
 
 .bigthumbnail {
       width: 50%;
@@ -1078,6 +1161,7 @@ a.by img {
 
 @media (min-width: 992px) {
 
+
 #overlay {
   margin-top: -20px;
 }
@@ -1200,42 +1284,7 @@ right: 40px;
     position: relative;
   }
 
-  #movie .direction {
-    display: block;
-    margin: 0 -10%;
-    position: absolute;
-    width: 115%;
-    top: 50%;
-  }
 
-  #movie .direction a {
-    cursor: pointer;
-    display: block;
-    padding: 20px;
-  }
-
-  #movie .direction a[href="#"] {
-    visibility: hidden;
-  }
-
-  #movie .direction svg {
-    width: 60px;
-    height: 60px;
-  }
-
-  #movie .direction:after {
-    clear: both;
-    content: "";
-    display: table;
-  }
-
-  #movie .prev {
-    float: left;
-  }
-
-  #movie .next {
-    float: right;
-  }
 
 
 .fullwidth h1{

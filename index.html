@@ -22,22 +22,26 @@ index: 1
       <h2>{{site.description}}</h2>
     </hgroup>
     <footer>
-      <a href="#bigpicture">watch videos</a>
+      <a href="#movies">watch videos</a>
     </footer>
   </article>
 </section>
 
+<!--
 <section id="bigpicture">
 <div class="fullwidth">
   <center><img src="/assets/images/thebigpicture.png" height="auto" width="500" > </center>
   <h2>A video series challenging global systems</h2>
-    <div class="bigthumbnail"> <img src="/assets/images/bigpicture_data.jpg"> <h1>Darkside of data </h1> <h2>Step one to prevent a global problem</h2></div>
-    <div class="bigthumbnail"> <img src="/assets/images/comingsoon.jpg"> <h1>No more cheap</h1>  <h2>A future economic that could benefit all </h2></div>
-    <div class="bigthumbnail"> <img src="/assets/images/comingsoon.jpg"> <h1>Western bubble </h1>  <h2>When the entire world is working for you</h2></div>
+    <div class="bigthumbnail"> <a href="/movie/darkside-of-data"><img src="/assets/images/stories/bigpicture_data.jpg"> </a><h1>Darkside of data </h1> <h2>Step one to prevent a global problem</h2></div>
+    <div class="bigthumbnail"> <img src="/assets/images/comingsoon.jpg"> <h1>No more cheap</h1>  <h2>A future economic that could benefit all. </h2></div>
     <div class="bigthumbnail"> <img src="/assets/images/comingsoon.jpg"> <h1>Realistic on profit </h1>  <h2>A different perspective to look at profits </h2></div>
+    <div class="bigthumbnail"> <img src="/assets/images/comingsoon.jpg"> <h1>Suprise</h1>  <h2>Got to keep it exciting</h2></div>
+    <h3>Support us on Patreon to make the videos</h3>
 </div>
 
 </section>
+-->
+
 
 
 <section id="movies">
@@ -87,18 +91,22 @@ index: 1
       <h1>story hopper</h1>
       <h2>subtitle</h2>
     </div>
-    <div class="direction">
-      <a href="#" class="prev">
-        {% include svg/arrow-left.svg %}
-      </a>
-
-      <a href="#" class="next">
-        {% include svg/arrow-right.svg %}
-      </a>
-    </div>
 
     <!-- DO NOT touch this either! :) -->
     <iframe width="854" height="480" src="https://www.youtube.com/embed/KJHhIV15CQ8" frameborder="0" allowfullscreen></iframe>
+    <div class="direction">
+      {% if page.previous.url %}
+        <a href="{{page.previous.url}}" class="prev">
+          {% include /assets/images/previous.png %}
+        </a>
+      {% endif %}
+
+      {% if page.next.url %}
+        <a href="{{page.next.url}}" class="next">
+          {% include /assets/images/next.png %}
+        </a>
+      {% endif %}
+    </div>
 
     <a href="#" target="_blank" class="discuss">discuss this video</a>
   </div>
