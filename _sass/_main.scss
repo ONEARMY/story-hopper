@@ -6,6 +6,8 @@ body {
   font-family: 'Varela Round', sans-serif;
   margin: 0;
   -webkit-font-smoothing: antialiased;
+  background: url(/assets/images/dot_background.png) top left #f9f9f9;
+  background-size: 643px 339px;
 }
 
 a {
@@ -15,14 +17,20 @@ a {
 h1, h2 {
   margin: 0;
   font-weight: normal;
-  font-family: 'League Gothic', sans-serif;
-  text-transform: uppercase;
+  font-family: 'bold', sans-serif;
 }
+
+figure figcaption h2 {
+    color: white;
+    padding: 10px;
+}
+
 
 input:focus,
 select:focus {
   outline: none;
 }
+
 
 video::-webkit-media-controls {
   display: none !important;
@@ -93,7 +101,8 @@ video::-webkit-media-controls {
 }
 
 .blue {
-  background: #B9D1E2;
+  background: url(/assets/images/dot_background.png) top left #B9D1E2;;
+  background-size: 643px 339px;
 }
 
 .notification {
@@ -172,6 +181,11 @@ video::-webkit-media-controls {
   padding-bottom: 100px;
 }
 
+hgroup img {
+    max-width: 500px;
+    width: 100%;
+}
+
 #intro footer {
   bottom: 50px;
   width: 100%;
@@ -212,9 +226,10 @@ video::-webkit-media-controls {
 
 #movies nav a {
   color: #000000;
-  border-radius: 6px;
+  border-radius: 5px;
   padding: 6px 13px 9px 9px;
   display: inline-block;
+  background-color:#ebebeb;
 }
 
 #movies nav a:hover,
@@ -227,14 +242,20 @@ video::-webkit-media-controls {
   margin-bottom: 25px;
 }
 
-#movies a[href*="you"] {
+#movies a[href*="movie"] {
   display: inline-block;
+  padding: 20px;
+
 }
 
 #movies .item {
   margin-bottom: 80px;
-  width: 100%;
+  width: 50%;
+  text-align: center;
+  height: 300px;
+  margin-bottom: 0px;
 }
+
 
 #movies .item.nolink {
   pointer-events: none;
@@ -245,23 +266,31 @@ video::-webkit-media-controls {
   margin: 0;
   position: relative;
   display: inline-block;
-}
-
-#movies figure > img {
-  display: block;
   box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.35);
 }
 
+#movies figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
 #movies span {
-  font-size: 18px;
+  font-size: 16px;
   padding-top: 15px;
   color: #616161;
   display: block;
   font-weight: 100;
+  font-family: 'medium', sans-serif;
 }
 
 #movies figcaption {
   display: none;
+}
+
+footer#info {
+    margin-top: 50px;
 }
 
 #info {
@@ -335,7 +364,8 @@ video::-webkit-media-controls {
   right: 0;
   bottom: 0;
   overflow: hidden;
-  background-color: #D8E7D5;
+  background: url(/assets/images/dot_background.png) top left #D8E7D5;
+  background-size: 643px 339px;
   text-align: center;
   display: none;
   z-index: 3000;
@@ -396,7 +426,8 @@ video::-webkit-media-controls {
 }
 
 #details {
-  background: #F4D1D1;
+  background: url(/assets/images/dot_background.png) top left #F4D1D1;
+  background-size: 643px 339px;
   text-align: center;
   padding: 100px 0 70px 0;
 }
@@ -510,7 +541,7 @@ video::-webkit-media-controls {
   background: #F2DC9F;
   margin-top: 25px;
   font-size: 36px;
-  font-family: 'League Gothic', sans-serif;
+  font-family: 'medium', sans-serif;
   text-transform: uppercase;
   border: 0;
   padding: 9px 33px;
@@ -576,7 +607,8 @@ video::-webkit-media-controls {
   top: 0;
   width: 100vw;
   height: 100%;
-  background: #F2DC9F;
+  background: url(/assets/images/dot_background.png) top left #F2DC9F;
+  background-size: 643px 339px;
   display: none;
   text-align: center;
   overflow: auto;
@@ -587,24 +619,69 @@ video::-webkit-media-controls {
   display: block;
 }
 
-#movie h1 {
-  font-size: 48px;
+
+#movie h3 {
+  font-size: 30px;
   display: block;
   margin-top: 22%;
-  margin-bottom: 60px;
 }
 
 #movie .discuss {
-  color: #000;
-  background: url(../images/discuss.png) no-repeat center top;
-  display: block;
-  padding-top: 48px;
-  margin-top: 13%;
-  margin-bottom: 60px;
+  display: inline-block;
+  color: white;
+  background-color: #2196F3;
+  font-family: 'medium', sans-serif;
+  font-size: 18px;
+  padding: 12px 15px;
+  margin-top:20px;
 }
 
+#movie .discuss:hover {
+  opacity: 0.8;
+}
+
+
+
 #movie .direction {
-  display: none;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#movie .direction a {
+  cursor: pointer;
+  display: block;
+}
+
+#movie .direction a[href="#"] {
+  visibility: hidden;
+}
+
+#movie .direction svg {
+  width: 40px;
+  background-color: white;
+  height: 40px;
+  width: 100%;
+}
+
+#movie .direction img {
+  height: 30px;
+  padding: 20px;
+  padding-top: 30px;
+}
+
+#movie .direction:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+#movie .prev {
+  float: left;
+}
+
+#movie .next {
+  float: right;
 }
 
 #newsbig article {
@@ -701,9 +778,210 @@ video::-webkit-media-controls {
 a.by img {
   width: 400px;
   margin-bottom: 10px;
+  max-width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.moviecard {
+  background-color: white;
+  width: 100%;
+  overflow:hidden;
+  height: auto;
+}
+
+.thumbnail {
+   float:left;
+   width:100%;
+   margin-bottom: 50px;
+   margin-top: 100px;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+#movie .info{
+  text-align:left;
+  padding: 20px;
+  padding-top: 0px;
+}
+
+#movie .aboutmovie {
+  font-family: 'medium', sans-serif;
+  font-size: 20px;
+  line-height: 40px;
+  overflow:hidden;
+}
+
+#movie .meta{
+  font-size:16px;
+  color: #989898;
+  width: auto;
+  display: inline-block;
+}
+
+.movie-titles {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.movie-titles h1 {
+  font-size: 46px;
+  color: #313131;
+}
+
+.movie-titles h2 {
+  color: #313131;
+  font-size: 20px;
+}
+
+.fullwidth {
+  padding: 40px 20px;
+  background-color: #353535;
+  display: inline-block;
+  box-sizing: border-box;
+  overflow:hidden;
+  width: 100%;
+}
+
+.fullwidth img {
+    width: 100%;
+    max-width: 500px;
+}
+
+
+.bigthumbnail {
+  width: 100%;
+  display: inline-block;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  float: left;
+  height: auto;
+  text-align: center;
+}
+
+.bigthumbnail img {
+  width: 100%;
+  font-size: 40px;
+  max-width: 500px;
+}
+
+
+
+.fullwidth h1 {
+    text-align: center;
+    font-size: 50px;
+    padding: 5px;
+    padding-bottom:0px;
+    color:white;
+}
+
+.fullwidth h2 {
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top:20px;
+    color: #a2a2a2;
+    font-family: 'medium';
+    font-size: 20px;
+}
+
+.fullwidth h3 {
+    text-align: center;
+    color: #2196F3;
+    font-family: medium;
+    font-weight: 200;
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+.backgroundimage {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  background: url(/assets/images/backgroundimage.jpg);
+  position: absolute;
+  top: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bigthumbnail h1 {
+  font-size: 24px;
+  padding-top: 20px;
+}
+
+.bigthumbnail h2 {
+  padding: 7px 10px 70px;
+  font-size: 20px;
+}
+
+
+
+#movies figure {
+  min-height: 150px;
+}
+
+
+
+
+@media (min-width: 524px) {
+
+  #movies .item {
+    margin-bottom: 80px;
+    height: auto;
+    }
+
+    #movie .info{
+      text-align:left;
+      padding: 60px;
+      padding-top: 20px;
+    }
+
+
+
 }
 
 @media (min-width: 768px) {
+
+
+  .movie-titles h1 {
+    font-size: 72px;
+  }
+
+  .movie-titles h2 {
+    font-size:24px;
+  }
+
+
+  #movie .discuss {
+    padding: 16px 20px;
+    margin-top:20px;
+  }
+
+
+  #movie .direction img {
+      height: 40px;
+  }
+
+.bigthumbnail {
+      width: 50%;
+      padding: 20px;
+      box-sizing: border-box;
+}
+
+.bigthumbnail h2 {
+    padding: 8px 0px 41px;
+}
+
+  #movies figure {
+    min-height: 373px;
+  }
+
 
   .toggle-nav {
     top: 30px;
@@ -896,9 +1174,6 @@ a.by img {
     margin: 110px 0 100px;
   }
 
-  #movie h1 {
-    margin-top: 100px;
-  }
 
   #movie .inner {
     width: 768px;
@@ -913,6 +1188,7 @@ a.by img {
 }
 
 @media (min-width: 992px) {
+
 
 #overlay {
   margin-top: -20px;
@@ -979,8 +1255,11 @@ right: 40px;
   }
 
   #movies figcaption img {
+    width: 48%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 45%;
-  }
+    }
 
   #menu h1 {
     margin-top: 100px;
@@ -1033,50 +1312,37 @@ right: 40px;
     position: relative;
   }
 
-  #movie .discuss {
-    margin-top: 60px;
-  }
 
-  #movie .direction {
-    display: block;
-    margin: 0 -10%;
-    position: absolute;
-    width: 120%;
-    top: 50%;
-  }
 
-  #movie .direction a {
-    cursor: pointer;
-    display: block;
-    padding: 20px;
-  }
 
-  #movie .direction a[href="#"] {
-    visibility: hidden;
-  }
+.fullwidth h1{
+  font-size: 60px;
+}
 
-  #movie .direction svg {
-    width: 24px;
-    height: 30px;
-  }
+.fullwidth h2 {
+    padding-bottom: 80px;
+    padding-top: 8px;
+}
 
-  #movie .direction:after {
-    clear: both;
-    content: "";
-    display: table;
-  }
+.bigthumbnail h2 {
+    padding: 8px 0px 80px;
+}
 
-  #movie .prev {
-    float: left;
-  }
+.bigthumbnail h1{
+  font-size:36px;
+}
 
-  #movie .next {
-    float: right;
-  }
 
 }
 
 @media (min-width: 1200px) {
+
+
+  .bigthumbnail {
+        width: 25%;
+        padding: 30px;
+  }
+
 
   #movies .inner:last-child {
     max-width: 1245px;

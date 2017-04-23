@@ -8,6 +8,7 @@ index: 1
   <video muted loop autoplay>
     <source src="/assets/intro.mp4" type="video/mp4">
   </video>
+  <div class="backgroundimage"> </div>
 
   <article>
     <span class="toggle-nav">
@@ -17,15 +18,30 @@ index: 1
     </span>
 
     <hgroup>
-      <h1>{{site.name}}</h1>
-      <h2>{{site.description}}</h2>
+      <img src="/assets/images/storyhopper-logo.png">
     </hgroup>
-
     <footer>
       <a href="#movies">watch videos</a>
     </footer>
   </article>
 </section>
+
+<!--
+<section id="bigpicture">
+<div class="fullwidth">
+  <center><img src="/assets/images/thebigpicture.png" height="auto" width="500" > </center>
+  <h2>A video series challenging global systems</h2>
+    <div class="bigthumbnail"> <a href="/movie/darkside-of-data"><img src="/assets/images/stories/bigpicture_data.jpg"> </a><h1>Darkside of data </h1> <h2>Step one to prevent a global problem</h2></div>
+    <div class="bigthumbnail"> <img src="/assets/images/comingsoon.jpg"> <h1>No more cheap</h1>  <h2>A future economic that could benefit all. </h2></div>
+    <div class="bigthumbnail"> <img src="/assets/images/comingsoon.jpg"> <h1>Realistic on profit </h1>  <h2>A different perspective to look at profits </h2></div>
+    <div class="bigthumbnail"> <img src="/assets/images/comingsoon.jpg"> <h1>Suprise</h1>  <h2>Got to keep it exciting</h2></div>
+    <h3>Support us on Patreon to make the videos</h3>
+</div>
+
+</section>
+-->
+
+
 
 <section id="movies">
   <div class="inner">
@@ -33,10 +49,10 @@ index: 1
 
     <nav>
       <a href="#original" class="active">💫 originals</a>
-      <a href="#submission">📦 submits</a>
-      <a href="#diy">🔧 DIY</a>
-      <a href="#travel">🚌 travel</a>
-      <a href="#idea">💡 ideas </a>
+      <a href="#submission">📦　submits</a>
+      <a href="#diy">🔧　DIY</a>
+      <a href="#travel">🚌 　travel</a>
+      <a href="#idea">💡　ideas </a>
     </nav>
   </div>
 
@@ -44,12 +60,13 @@ index: 1
     {% for video in site.posts %}
 
       <div class="item {{video.categories | join: " "}}">
-        <a href="https://www.youtube.com/watch?v={{video.youtube}}" data-discussion="{{video.discussion}}" data-slug="{{video.slug}}">
+        <a href="/movie/{{video.slug}}/" data-discussion="{{video.discussion}}" data-slug="{{video.slug}}">
           <figure>
             <img width="264" height="373" src="/assets/images/stories/{{video.preview}}">
 
             <figcaption>
               <img src="/assets/images/play.png">
+                <h2>{{video.subtitle}}</h2>
             </figcaption>
           </figure>
           <span>{{video.title}}</span>
@@ -69,20 +86,26 @@ index: 1
 
   <div class="inner">
     <!-- DO NOT touch this! :) -->
-    <h1>Story Hopper</h1>
-
-    <div class="direction">
-      <a href="#" class="prev">
-        {% include svg/arrow-left.svg %}
-      </a>
-
-      <a href="#" class="next">
-        {% include svg/arrow-right.svg %}
-      </a>
+    <div class="movie-titles">
+      <h1>story hopper</h1>
+      <h2>subtitle</h2>
     </div>
 
     <!-- DO NOT touch this either! :) -->
     <iframe width="854" height="480" src="https://www.youtube.com/embed/KJHhIV15CQ8" frameborder="0" allowfullscreen></iframe>
+    <div class="direction">
+      {% if page.previous.url %}
+        <a href="{{page.previous.url}}" class="prev">
+          {% include /assets/images/previous.png %}
+        </a>
+      {% endif %}
+
+      {% if page.next.url %}
+        <a href="{{page.next.url}}" class="next">
+          {% include /assets/images/next.png %}
+        </a>
+      {% endif %}
+    </div>
 
     <a href="#" target="_blank" class="discuss">discuss this video</a>
   </div>

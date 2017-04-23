@@ -37,6 +37,7 @@ var switchMovie = function( id, event ) {
   $( 'body' ).data( 'old-title', document.title );
   document.title = title + ' | Story Hopper';
 
+
   window.history.pushState( null, null, url );
 
   movie.find( '.discuss' ).attr( 'href', function() {
@@ -179,10 +180,12 @@ $( document ).ready( function() {
 
   });
 
+  /*
   $( '#movies a[href*="you"]' ).click( function( event ) {
     var id = $( this ).attr( 'href' ).split( 'v=' )[1];
     switchMovie.call( this, id, event );
   });
+  */
 
   $( '#about, #movie' ).fitVids();
 

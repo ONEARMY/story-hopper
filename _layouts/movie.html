@@ -10,24 +10,43 @@ layout: default
   </a>
 
   <div class="inner">
-    <h1>{{page.title}}</h1>
+      <div class="movie-titles">
+        <h1>{{page.title}}</h1>
+        <h2>{{page.subtitle}}</h2>
+      </div>
+      <iframe width="854" height="480" src="//www.youtube.com/embed/{{page.youtube}}" frameborder="0" allowfullscreen></iframe>
 
-    <div class="direction">
-      {% if page.previous.url %}
-        <a href="{{page.previous.url}}" class="prev">
-          {% include svg/arrow-left.svg %}
-        </a>
-      {% endif %}
 
-      {% if page.next.url %}
-        <a href="{{page.next.url}}" class="next">
-          {% include svg/arrow-right.svg %}
-        </a>
-      {% endif %}
-    </div>
+  </div>
 
-    <iframe width="854" height="480" src="//www.youtube.com/embed/{{page.youtube}}" frameborder="0" allowfullscreen></iframe>
+<div class="inner">
+<div class="moviecard">
+     <div class="info">
+        <div class="aboutmovie"><p>{{page.about}}</p></div>
+        <div class="meta">
+          <p>{% if page.categories contains "submission"%}
+            📦 &nbsp; A community submission
+          {% else %}
+            💫 &nbsp; An original
+          {% endif %} made by {{page.maker}} on {{ page.date | date: '%B, %Y' }}</p>
+        <a href="{{page.discussion}}" target="_blank" class="discuss">discuss this video</a></div>
 
-    <a href="{{page.discussion}}" target="_blank" class="discuss">discuss this video</a>
+     </div>
+</div>
+<div class="direction">
+  {% if page.previous.url %}
+    <a href="{{page.previous.url}}" class="prev">
+      <img src="/assets/images/previous.png">
+    </a>
+  {% endif %}
+
+  {% if page.next.url %}
+    <a href="{{page.next.url}}" class="next">
+      <img src="/assets/images/next.png">
+    </a>
+  {% endif %}
+</div>
+<div class="thumbnail"> <img src="/assets/images/stories/{{page.preview-large}}"></div>
+
   </div>
 </section>
