@@ -158,6 +158,11 @@ video::-webkit-media-controls {
   padding-bottom: 100px;
 }
 
+hgroup img {
+    max-width: 500px;
+    width: 100%;
+}
+
 #intro footer {
   bottom: 50px;
   width: 100%;
