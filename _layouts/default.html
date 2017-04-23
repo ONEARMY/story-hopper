@@ -23,7 +23,7 @@
       <title>{% if page.title %}{{page.title}} &dash; {{site.title}}{% else %}{{site.title}}{% endif %}</title>
     {% endif %}
 
-    {% if page.url == "/news" %}
+    {% if page.url == "/news/" %}
       <meta name="robots" content="noindex, nofollow">
     {% endif %}
 
@@ -35,7 +35,7 @@
     <link rel="shortcut icon" href="/assets/images/favicon.ico">
   </head>
 
-  {% if page.url == "/about-the-project" %}
+  {% if page.url == "/about-the-project/" %}
     <body class="blue">
   {% else %}
     <body>
