@@ -10,7 +10,7 @@ sass:
 
 # Misc
 exclude: ['CNAME', 'LICENSE.md', 'README.md']
-permalink: /movie/:title
+permalink: /movie/:title/
 
 # Gems
 gems:
