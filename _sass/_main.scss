@@ -908,6 +908,7 @@ a.by img {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  z-index:-999;
 }
 
 .bigthumbnail h1 {
