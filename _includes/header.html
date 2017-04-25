@@ -13,9 +13,11 @@
       {% endif %}
 
       {% unless node.url contains "assets" %}
-        <li class="{{current}}">
-          <a href="{{node.url}}">{{node.title}}</a>
-        </li>
+        {% unless node.url contains "." %}
+          <li class="{{current}}">
+            <a href="{{node.url}}">{{node.title}}</a>
+          </li>
+        {% endunless %}
       {% endunless %}
 
     {% endfor %}
