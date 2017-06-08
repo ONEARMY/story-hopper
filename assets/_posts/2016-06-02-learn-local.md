@@ -6,7 +6,7 @@ about: Often when I  go traveling I go the comfortable way, probably most people
 date: 2016-06-02 10:00
 categories:
 - original
-- travel
+- research
 youtube: 4yLcywTtiiE
 discussion: https://davehakkens.nl/community/forums/forum/story-hopper/discuss/
 preview: learn-local.jpg

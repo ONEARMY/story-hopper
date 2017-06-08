@@ -6,7 +6,7 @@ about: Went to Agbogbloshie in Ghana. A big dumping place where a lot of our old
 date: 2015-10-05 18:06
 categories:
 - original
-- travel
+- research
 youtube: 1rhGoAzDDaE
 discussion: https://davehakkens.nl/community/forums/topic/a-free-trip/
 preview: a-free-trip.jpg

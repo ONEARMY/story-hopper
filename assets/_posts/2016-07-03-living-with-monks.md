@@ -6,7 +6,7 @@ about: Spend 10 days with the monks in Thailand to train the brain. No talking, 
 date: 2016-07-03 10:00
 categories:
   - original
-  - travel
+  - research
 youtube: FRUnAaJz96c
 discussion: https://davehakkens.nl/community/forums/topic/living-with-monks/
 preview: living-with-monks.jpg

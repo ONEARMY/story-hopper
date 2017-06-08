@@ -6,7 +6,7 @@ about: I like to think the world is a nice place and as long as you do what you 
 date: 2016-04-10 16:05
 categories:
 - original
-- travel
+- research
 youtube: YQw9cd1C-qA
 discussion: https://davehakkens.nl/community/forums/topic/nice-world/
 preview: nice-world.jpg

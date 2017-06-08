@@ -6,7 +6,7 @@ about: Shot this video during our trip in Indonesia. I finally understand why pe
 date: 2016-09-05 10:00
 categories:
   - original
-  - travel
+  - research
 youtube: tce1gzLxKTw
 discussion: https://davehakkens.nl/community/forums/forum/story-hopper/discuss/
 preview: a-beach-cleanup.jpg

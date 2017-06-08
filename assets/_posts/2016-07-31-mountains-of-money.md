@@ -6,7 +6,7 @@ about: A simple lunch comes with a lot of packaging these days. This stuff has a
 date: 2016-07-31 10:00
 categories:
   - original
-  - travel
+  - research
 youtube: f1C65aybeQ8
 discussion: https://davehakkens.nl/community/forums/forum/story-hopper/discuss/
 preview: mountains-of-money.jpg

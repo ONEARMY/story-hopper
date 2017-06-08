@@ -6,7 +6,7 @@ about: A look beyond one of the most beautiful places on earth.
 date: 2016-04-23 10:00
 categories:
 - original
-- travel
+- reseach
 youtube: _QAvvdKkGgY
 discussion: https://davehakkens.nl/community/forums/forum/story-hopper/discuss/
 preview: backstage-paradise.jpg

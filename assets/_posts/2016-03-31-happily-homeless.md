@@ -6,7 +6,7 @@ about: I’ve been living in this weird temporary house over the last 3 years. N
 date: 2016-03-31 16:05
 categories:
 - original
-- travel
+- research
 youtube: n9oVj6ccWik
 discussion: https://davehakkens.nl/community/forums/topic/happily-homless/
 preview: happily-homeless.jpg
