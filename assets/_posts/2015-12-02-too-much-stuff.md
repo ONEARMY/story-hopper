@@ -6,7 +6,7 @@ about: Getting rid of the useless stuff in my life. I just keep carrying  boxes 
 date: 2015-12-02 23:33
 categories:
 - original
-- DIY
+- diy
 youtube: Jhy6OZzuRJE
 discussion: https://davehakkens.nl/community/forums/topic/to-much-stuff/
 preview: too-much-stuff.jpg
