@@ -116,6 +116,7 @@ video::-webkit-media-controls {
     z-index: 99999;
     font-size: 14px;
     font-weight: bold;
+    display:none;
 }
 @media (min-width: 768px) {
 .notification {
