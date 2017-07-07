@@ -17,7 +17,9 @@ a {
 h1, h2 {
   margin: 0;
   font-weight: normal;
-  font-family: 'boldy', sans-serif;
+  font-family: 'medium', sans-serif;
+
+
 }
 
 figure figcaption h2 {
@@ -116,7 +118,7 @@ video::-webkit-media-controls {
     z-index: 99999;
     font-size: 14px;
     font-weight: bold;
-    display:none;
+    display:nonn
 }
 @media (min-width: 768px) {
 .notification {
