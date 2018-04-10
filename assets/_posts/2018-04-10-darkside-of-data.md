@@ -2,7 +2,13 @@
 maker: Dave Hakkens
 title: Darkside of Data
 subtitle: Avoid the next global problem
-about: I always wonder whether fake stuff is worse than the real. Whether the extra amount of money you pay for the originals truly gives a better product. I bought a fake an real Nike shoe and starter wearing them at the same time wherever I went for the last year. Noticeable difference already after a few weeks and in the end one true winner. However the results don't matter. There is a reason why you shouldn't buy fake stuff. ever.
+about: This is a conversation starter first and a video second.
+
+I have mixed feelings when it comes to our digital world.  Apps, messages, tweets, blogs, mails, pictures, videos. We can all communicate with each other instantly, spread knowledge and share pictures of our avocado lunch with the rest of the world. All this data is flowing through a network of cables around the world that we call internet.  Its such an incredible powerful tool we humans created.
+
+We are aware of the amazing revolutions the digital world brings us.  Companies love to share this part of the story. Where their marketing machines are focussed on. However there is a BIG Darkside to this world of data. So big that it could easily be our next global problem. No kidding.
+
+This is the first step to prevent this problem. Unveil the darkside....
 date: 2017-07-02 10:00
 categories:
   - original
