@@ -9,7 +9,7 @@ I have mixed feelings when it comes to our digital world.  Apps, messages, tweet
 We are aware of the amazing revolutions the digital world brings us.  Companies love to share this part of the story. Where their marketing machines are focussed on. However there is a BIG Darkside to this world of data. So big that it could easily be our next global problem. No kidding.
 
 This is the first step to prevent this problem. Unveil the darkside....
-date: 2018-04-01 10:00
+date: 2017-04-01 10:00
 categories:
   - original
   - idea
