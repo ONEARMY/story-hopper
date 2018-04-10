@@ -10,6 +10,6 @@ categories:
 youtube: NX7AU3SwTNs
 discussion: https://davehakkens.nl/storyhopper/the-darkside-of-data/
 preview: darksideofdata.gif
-preview-large: darksideofdata-large.jpg
+preview-large: darksideofdata-large.gif
 layout: movie
 ---
