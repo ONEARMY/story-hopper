@@ -1,7 +1,7 @@
 ---
 maker: Dave Hakkens
 title: No more cheap
-subtitle: Make more money and reduce waste.
+subtitle: Why buying cheap stuff is wrong
 about: This is a theory that shows what happens if we stop buying cheap stuff. We could have better quality products, have higher salaries and reduce the amount of waste. Maybe its time to try it out?
 date: 2018-04-15 10:01
 categories:
