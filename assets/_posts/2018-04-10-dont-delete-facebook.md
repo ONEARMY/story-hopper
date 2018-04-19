@@ -6,7 +6,7 @@ about: Facebook is a powerful tool to reach the world, but is it worth it? Let's
 date: 2018-04-10 10:01
 categories:
   - original
-  - idea
+  - research
 youtube: iXuUE8OC1lw
 discussion: https://davehakkens.nl/storyhopper/the-darkside-of-data/
 preview: facebook-small.jpg
