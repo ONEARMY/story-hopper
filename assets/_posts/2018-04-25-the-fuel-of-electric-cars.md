@@ -9,7 +9,7 @@ categories:
   - research
 youtube: 0KX2qw79qpk
 discussion: https://davehakkens.nl/community/forums/topic/the-fuel-of-electric-cars-ideas-suggestions/
-preview: the-fuel-of-electric-cars-small.jpg
-preview-large: the-fuel-of-electric-cars-large.jpg
+preview: the-fuel-of-electric-cars_small.jpg
+preview-large: the-fuel-of-electric-cars_large.jpg
 layout: movie
 ---
