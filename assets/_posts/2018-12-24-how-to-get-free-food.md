@@ -7,7 +7,7 @@ date: 2018-12-24 10:01
 categories:
   - original
   - diy
-youtube: https://youtu.be/KEtUapdPDtQ
+youtube: KEtUapdPDtQ
 discussion: https://davehakkens.nl/storyhopper/how-to-get-free-food/
 preview: how-to-get-free-food-small.jpg
 preview-large: how-to-get-free-food-big.jpg
