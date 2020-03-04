@@ -6,9 +6,9 @@ about: Apparently 1/3 of all the food we humans produce globally goes to waste (
 date: 2018-12-24 10:01
 categories:
   - original
-  - diy
+  - research
 youtube: KEtUapdPDtQ
-discussion: https://davehakkens.nl/storyhopper/how-to-get-free-food/
+discussion: https://discordapp.com/invite/rnx7m4t
 preview: travel-sustainable.jpg
 preview-large: travel-sustainable-large.jpg
 layout: movie
